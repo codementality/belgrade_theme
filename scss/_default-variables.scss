@@ -10,6 +10,16 @@
  * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
 
+// Colors
+$violet: #41449f;
+$violet-hover: rgba($violet, 80);
+$violet-medium: #babad3;
+$violet-light: #e9e9f2;
+$green: #00746b;
+$green-hover: rgba($green, 80);
+$red: #ff4141;
+$reg-hover: rgba($red, 80);
+
 // Set the proper directory for the Bootstrap Glyphicon font.
 $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
 
@@ -21,3 +31,4 @@ $navbar-default-bg: #272727;
 $navbar-default-color: #ffffff;
 $navbar-default-link-color: $navbar-default-color;
 $navbar-default-link-hover-color: darken($navbar-default-color, 20%);
+$navbar-margin-bottom: 0;

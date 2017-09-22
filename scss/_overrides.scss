@@ -79,6 +79,10 @@ p:last-child,
     text-decoration: none;
     &:hover {
       text-decoration: none;
+      .cart-block--summary__count {
+        border-bottom: 1px solid rgba(white, 80);
+        padding-bottom: 2px;
+      }
     }
   }
 }
@@ -92,4 +96,15 @@ p:last-child,
     padding-top:    15px;
     padding-bottom: 15px;
   }
+}
+
+.region-header {
+  background-color: $violet-medium;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
 }
