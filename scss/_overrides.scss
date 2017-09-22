@@ -67,3 +67,29 @@ p:last-child,
     margin-top: 0;
   }
 }
+
+.navbar {
+  font-weight: 100;
+}
+
+.cart-block--summary {
+  margin-right: 15px;
+  a {
+    color: $navbar-default-link-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.cart-block--link__expand {
+  padding-top:    10px;
+  padding-bottom: 10px;
+}
+@media (min-width: $grid-float-breakpoint) {
+  .cart-block--link__expand {
+    padding-top:    15px;
+    padding-bottom: 15px;
+  }
+}

@@ -44,6 +44,7 @@ body {
     }
   }
 }
+
 .navbar.container {
   @media #{$tablet} {
     max-width: (($container-sm - $grid-gutter-width));

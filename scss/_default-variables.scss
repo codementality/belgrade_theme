@@ -13,4 +13,11 @@
 // Set the proper directory for the Bootstrap Glyphicon font.
 $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
 
+// Fonts
 $font-family-sans-serif:  'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+$navbar-default-bg: #272727;
+$navbar-default-color: #ffffff;
+$navbar-default-link-color: $navbar-default-color;
+$navbar-default-link-hover-color: darken($navbar-default-color, 20%);
