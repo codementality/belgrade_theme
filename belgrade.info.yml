@@ -18,3 +18,8 @@ regions:
   footer: 'Footer'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
+
+libraries:
+  - 'belgrade/fonts'
+  - 'belgrade/theme'
+  - 'belgrade/bootstrap-scripts'
