@@ -4,6 +4,7 @@
 @import "component/ajax";
 @import "component/breadcrumbs";
 @import "component/buttons";
+@import "component/cart-block";
 @import "component/close";
 @import "component/field";
 @import "component/file";
@@ -17,9 +18,15 @@
 @import "component/table-drag";
 @import "component/tabs";
 @import "component/toolbar";
+@import "component/toggle";
+@import "component/side-flyout";
 
 // jQuery UI style overrides.
 @import "jquery-ui/autocomplete";
+
+body{
+  @extend %font-smoothing;
+}
 
 ol, ul {
   padding-left: 1.5em;
@@ -31,14 +38,6 @@ ol, ul {
 // Page header.
 .page-header {
   margin-top: 0;
-}
-
-// Footer.
-.footer {
-  margin-top: 45px;
-  padding-top: 35px;
-  padding-bottom: 36px;
-  border-top: 1px solid #E5E5E5;
 }
 
 // Paragraphs.
@@ -69,45 +68,4 @@ p:last-child,
   &:first-child {
     margin-top: 0;
   }
-}
-
-.navbar {
-  font-weight: 100;
-}
-
-.cart-block--summary {
-  margin-right: 15px;
-  a {
-    color: $navbar-default-link-color;
-    text-decoration: none;
-    &:hover {
-      text-decoration: none;
-      .cart-block--summary__count {
-        border-bottom: 1px solid rgba(white, 80);
-        padding-bottom: 2px;
-      }
-    }
-  }
-}
-
-.cart-block--link__expand {
-  padding-top:    10px;
-  padding-bottom: 10px;
-}
-@media (min-width: $grid-float-breakpoint) {
-  .cart-block--link__expand {
-    padding-top:    15px;
-    padding-bottom: 15px;
-  }
-}
-
-.region-header {
-  background-color: $violet-medium;
-  margin-bottom: 20px;
-  padding: 20px 0;
-}
-
-.logo img {
-  width: 100%;
-  height: auto;
 }

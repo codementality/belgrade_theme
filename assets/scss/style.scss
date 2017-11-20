@@ -60,5 +60,10 @@
 // Generated Icon font
 @import "icon-font";
 
+// Regions
+@import "regions/top-navigation";
+@import "regions/header";
+@import "regions/navigation";
+
 // Base-theme overrides.
 @import 'overrides';

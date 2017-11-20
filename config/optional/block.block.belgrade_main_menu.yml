@@ -9,7 +9,7 @@ dependencies:
     - belgrade
 id: belgrade_main_menu
 theme: belgrade
-region: navigation_collapsible
+region: navigation
 weight: -7
 provider: null
 plugin: 'system_menu_block:main'
