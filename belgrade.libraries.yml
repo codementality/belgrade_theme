@@ -6,8 +6,14 @@ theme:
   css:
     theme:
       'assets/css/style.css': { }
+  js:
+      'assets/js/belgrade.js': { }
   dependencies:
     - belgrade/fonts
+
+commerce.product-images:
+    js:
+      'assets/js/product_images.js': { }
 
 bootstrap-scripts:
   js:

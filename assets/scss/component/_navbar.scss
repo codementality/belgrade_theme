@@ -45,6 +45,16 @@ body {
   }
 }
 
+.navbar {
+  font-weight: 100;
+  border-bottom: 0;
+  .navbar-nav{
+    display: flex;
+    margin: 0;
+  }
+}
+
+
 .navbar.container {
   @media #{$tablet} {
     max-width: (($container-sm - $grid-gutter-width));
@@ -57,14 +67,16 @@ body {
   }
 }
 
-// Branding.
-.navbar .logo {
-  margin-right: -($grid-gutter-width / 2);
-  padding-left: ($grid-gutter-width / 2);
-  padding-right: ($grid-gutter-width / 2);
-  @media #{$grid-breakpoint} {
-    margin-right: 0;
-    padding-left: 0;
-  }
+.navbar-header {
+  float: left;
 }
 
+// Reset navbar right styles
+.navbar-right{
+  margin-right: 0;
+  @media #{$tablet} {
+    &.navbar-nav li{
+      margin-left: 25px;
+    }
+  }
+}

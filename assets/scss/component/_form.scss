@@ -2,6 +2,14 @@
  * Form styles.
  */
 
+.form-control{
+  border-width: 2px;
+  font-weight: bold;
+  &[disabled]{
+    opacity: .5;
+  }
+}
+
 // Checkboxes / radio buttons.
 .checkbox, .radio {
   // Remove top/bottom margins when in table context, because this is most
@@ -43,7 +51,7 @@
     }
   }
   &:after {
-    color: $brand-primary;
+    color: $violet;
     content: '▼';
     font-style: normal;
     font-weight: 400;
@@ -98,5 +106,12 @@
     .btn {
       margin-right: 0;
     }
+  }
+}
+
+// Disabled
+.form-disabled{
+  .select-wrapper:after{
+    opacity: .5;
   }
 }
