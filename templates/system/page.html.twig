@@ -58,7 +58,7 @@
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {# Navbar #}
-{% if page.navigation or page.navigation_collapsible %}
+{% if page.navigation or page.top_navigation %}
   {% block navbar %}
     {%
       set navbar_classes = [
@@ -72,23 +72,21 @@
         <div class="{{ container }}">
       {% endif %}
       <div class="navbar-header">
-        {{ page.navigation }}
         {# .btn-navbar is used as the toggle for collapsed navbar content #}
-        {% if page.navigation_collapsible %}
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-            <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+        {% if page.navigation %}
+          <button type="button" class="toggle-btn"  data-toggle="collapse" data-target="#off-canvas">
+              <div class="toggle-btn--bars">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+              <span class="toggle-btn--name hidden-xs">{{ 'Menu'|t }}</span>
           </button>
         {% endif %}
       </div>
 
       {# Navigation (collapsible) #}
-      {% if page.navigation_collapsible %}
-        <div id="navbar-collapse" class="navbar-collapse collapse">
-          {{ page.navigation_collapsible }}
-        </div>
+      {% if page.top_navigation %}
+          {{ page.top_navigation }}
       {% endif %}
       {% if not navbar_attributes.hasClass(container) %}
         </div>
@@ -101,6 +99,12 @@
 {% block main %}
   <div role="main" class="main-container js-quickedit-main-content">
     <div class="row">
+      {# Off canvas side navigation #}
+      {% if page.navigation %}
+        <div id="off-canvas" class="side-flyout collapse left">
+          {{ page.navigation }}
+        </div>
+      {% endif %}
 
       {# Header #}
       {% if page.header %}
@@ -182,7 +186,7 @@
 
 {% if page.footer %}
   {% block footer %}
-    <footer class="footer {{ container }}" role="contentinfo">
+    <footer class="footer" role="contentinfo">
       {{ page.footer }}
     </footer>
   {% endblock %}
