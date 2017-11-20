@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "icons";
+    src: url("../fonts/icons.eot?67e086b00f1e3614c555073162f0b04b?#iefix") format("embedded-opentype"),
+url("../fonts/icons.woff2?67e086b00f1e3614c555073162f0b04b") format("woff2"),
+url("../fonts/icons.woff?67e086b00f1e3614c555073162f0b04b") format("woff"),
+url("../fonts/icons.ttf?67e086b00f1e3614c555073162f0b04b") format("truetype"),
+url("../fonts/icons.svg?67e086b00f1e3614c555073162f0b04b#icons") format("svg");
+}
+
+.glyph {
+    line-height: 1;
+}
+
+.glyph:before {
+    content: "";
+    display: inline-block;
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    vertical-align: middle;
+}
+
+.glyph-arrows:before {
+    content: "\f101";
+}
+.glyph-cart:before {
+    content: "\f102";
+}
+.glyph-close:before {
+    content: "\f103";
+}
+.glyph-facebook:before {
+    content: "\f104";
+}
+.glyph-plus:before {
+    content: "\f105";
+}
+.glyph-twitter:before {
+    content: "\f106";
+}
+.glyph-youtube:before {
+    content: "\f107";
+}
