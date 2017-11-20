@@ -5923,6 +5923,12 @@ button.close {
       .footer .menu-social__item:first-child {
         margin-left: 0; } }
 
+.path-frontpage .region-header {
+  background-color: #babad3; }
+
+.path-frontpage .menu-catalog-menu__link {
+  color: #fff; }
+
 /**
  * Alert styling.
  */
