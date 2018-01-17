@@ -16,6 +16,31 @@
   .field--name-title{
     font-size: $font-size-h1;
   }
+  // Color
+  .field--name-variations{
+    h3{
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0 25px 5px 0;
+    }
+    .field--item{
+      display: flex;
+      align-items: center;
+    }
+    ul{
+      padding: 0;
+      list-style: none;
+      margin: 0;
+      li{
+        display: inline-block;
+        margin-right: 5px;
+      }
+    }
+    .field__items{
+      margin-top: 25px;
+    }
+  }
   // Price
   .field--name-price{
     font-weight: bold;
@@ -46,20 +71,31 @@
         padding: 0;
         border-radius: 0;
       }
+      .control-label{
+        border: 2px solid transparent;
+        &:before,
+        &:after{
+          display: none;
+        }
+      }
     }
     // selected and active variations
-    .form-radio:checked + div .field--name-field-color > div{
-      border: 2px solid $violet;
+    .form-radio:checked  ~ label.option {
+      border: 2px solid $brand-primary;
     }
   }
   // Select
   .form-type-select{
     label{
       margin-right: 25px;
+      text-transform: uppercase;
     }
   }
   .select-wrapper{
     width: 90px;
+  }
+  .form-control{
+    border-color: $brand-primary;
   }
   // Submit button
   .form-submit{
@@ -119,7 +155,8 @@
     cursor: pointer;
     &:hover{
       &:before{
-        background-color: rgba($violet, 0.8);
+        background-color: rgba($brand-primary, 0.8);
+
         @extend .glyph-plus;
       }
     }
@@ -137,7 +174,7 @@
       transition: background-color .2s ease;
     }
     &.active{
-      border-color: rgba($violet, 0.8);
+      border-color: rgba($brand-primary, 0.8);
     }
     img{
       display: none;

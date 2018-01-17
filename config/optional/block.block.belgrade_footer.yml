@@ -10,7 +10,7 @@ dependencies:
 id: belgrade_footer
 theme: belgrade
 region: footer
-weight: 0
+weight: -6
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

@@ -109,9 +109,7 @@
       {# Header #}
       {% if page.header %}
         {% block header %}
-          <div class="col-sm-12" role="heading">
             {{ page.header }}
-          </div>
         {% endblock %}
       {% endif %}
 
@@ -130,8 +128,7 @@
         set content_classes = [
         page.sidebar_first and page.sidebar_second ? 'col-sm-6',
         page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
-        page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
-        page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
+        page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9'
         ]
         %}
         <section{{ content_attributes.addClass(content_classes) }}>

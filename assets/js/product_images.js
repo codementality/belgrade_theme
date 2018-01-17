@@ -3,12 +3,12 @@
  * Product images JS
  */
 (function ($) {
-  
+
     'use strict';
-  
+
     Drupal.behaviors.productImages = {
       attach: function (context, settings) {
-              
+
         $('.product-img--main')
         // tile mouse actions
         .on('mouseover', function(){
@@ -30,7 +30,7 @@
         });
 
         $('.product-img--thumb')
-        
+
         .click(function(){
           // add active class to visble image
           $(this).addClass('active').siblings().removeClass('active');
@@ -44,7 +44,7 @@
         $('.product-img--thumb__switcher')
         .click(function(){
           if ($(this).siblings('.active').is(":last-child")){
-            // check if the needed lement is last
+            // check if the needed element is last
             $(this).siblings().first().click();
           } else{
             // if not just click on next
@@ -54,6 +54,5 @@
 
       }
     };
-  
+
   })(jQuery);
-  

@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: catalog-menu
-label: 'Catalog menu'
-description: ''
-locked: false

@@ -11,6 +11,10 @@ theme:
   dependencies:
     - belgrade/fonts
 
+custom-form-elements:
+    js:
+      'assets/js/custom_form_elements.js': { }
+
 commerce.product-images:
     js:
       'assets/js/product_images.js': { }

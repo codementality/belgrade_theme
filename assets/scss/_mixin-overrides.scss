@@ -6,18 +6,18 @@
 @mixin button-variant($color, $background, $border) {
   color: $color;
   background-color: $background;
-  border-color: $background;
+  border-color: $border;
 
   &:focus,
   &.focus {
     color: $background;
-    background-color: transparent;
-        border-color: $background;
+    background-color: $color;
+        border-color: $border;
   }
   &:hover {
     color: $background;
-    background-color: transparent;
-        border-color: $background;
+    background-color: $color;
+        border-color: $border;
   }
   &:active,
   &.active,

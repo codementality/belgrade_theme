@@ -14,3 +14,6 @@
 # Disable the CDN provider so compiled source files can be used.
 cdn_provider: ''
 navbar_position: static-top
+table_hover: 0
+table_striped: 0
+breadcrumb_home: 1

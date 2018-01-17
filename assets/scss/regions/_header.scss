@@ -29,18 +29,22 @@
       text-transform: uppercase;
       white-space: nowrap;
       font-size: 18px;
+      &:before{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: transparent;
+        transition: all .2s ease-in-out;
+        content: "";
+        transform: translateX(-50%);
+      }
       &:hover,
       &.is-active{
         &:before{
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          display: block;
-          width: 40px;
-          height: 2px;
-          background-color: $violet;
-          content: "";
-          transform: translateX(-50%);
+          background-color: $brand-primary;
         }
       }
     }
@@ -52,6 +56,7 @@
 
   // responsive overrides
   @media screen and (min-width: $grid-float-breakpoint) {
+    padding: 90px 0 75px 0;
     .menu-catalog-menu {
       display: flex;
     }

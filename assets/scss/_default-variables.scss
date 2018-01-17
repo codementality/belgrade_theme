@@ -3,14 +3,12 @@
  *
  * Modify this file to provide default Bootstrap Framework variables. The
  * Bootstrap Framework will not override any variables defined here because it
- * uses the `!default` flag which will only set their default if not already
+ * uses the ` flag which will only set their default if not already
  * defined here.
  *
  * You can copy existing variables directly from the following file:
  * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
-
-// Import bootstrap variables to be used
 
 // Colors
 $violet:        #41449f;
@@ -20,7 +18,15 @@ $violet-light:  #e9e9f2;
 $green:         #00746b;
 $green-hover:   rgba($green, 80);
 $red:           #ff4141;
-$reg-hover:     rgba($red, 80);
+$red-hover:     rgba($red, 80);
+
+// Brand colors
+$brand-primary:         $violet;
+$brand-success:         $green;
+$brand-info:            $violet;
+$brand-warning:         #f0ad4e; // default bootstrap
+$brand-danger:          $red;
+
 
 // Set the proper directory for the Bootstrap Glyphicon font.
 $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
@@ -28,11 +34,99 @@ $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif:  'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-base:        $font-family-sans-serif;
+$font-family-sans-serif: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-base:       $font-family-sans-serif;
 
-$font-size-base:          16px;
-$font-size-h1:            48px;
+$font-size-base:         16px;
+$font-size-h1:           48px;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #fff;
+//** Global text color on `<body>`.
+$text-color:            $gray-dark;
+
+//** Global textual link color.
+$link-color:            $brand-primary;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%);
+//** Link hover decoration.
+$link-hover-decoration: none;
+
+$border-radius-base:     0;
+
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+$btn-default-color:              $brand-primary;
+$btn-default-bg:                 #fff;
+$btn-default-border:             $brand-primary;
+
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             $btn-primary-bg;
+
+$btn-success-color:              #fff;
+$btn-success-bg:                 $brand-success;
+$btn-success-border:             $btn-success-bg;
+
+$btn-info-color:                 #fff;
+$btn-info-bg:                    $brand-info;
+$btn-info-border:                $btn-info-bg;
+
+$btn-warning-color:              #fff;
+$btn-warning-bg:                 $brand-warning;
+$btn-warning-border:             $btn-warning-bg;
+
+$btn-danger-color:               #fff;
+$btn-danger-bg:                  $brand-danger;
+$btn-danger-border:              $btn-danger-bg;
+
+$btn-link-disabled-color:        $gray-light;
+
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+//** Padding for `<th>`s and `<td>`s.
+$table-cell-padding:            8px;
+//** Padding for cells in `.table-condensed`.
+$table-condensed-cell-padding:  5px;
+
+//** Default background color used for all tables.
+$table-bg:                      transparent;
+//** Background color used for `.table-striped`.
+$table-bg-accent:               $violet-light;
+//** Background color used for `.table-hover`.
+$table-bg-hover:                $violet-light;
+$table-bg-active:               $table-bg-hover;
+
+//** Border color for table and cell borders.
+$table-border-color:            $violet;
+
+//== Panels
+//
+//##
+
+$panel-bg:                    #fff;
+$panel-body-padding:          15px;
+$panel-heading-padding:       10px 15px;
+$panel-footer-padding:        $panel-heading-padding;
+$panel-border-radius:         0;
+
+//** Border color for elements within panels
+$panel-inner-border:          #ddd;
+$panel-footer-bg:             #f5f5f5;
+
+$panel-default-text:          $gray-dark;
+$panel-default-border:        transparent;
+$panel-default-heading-bg:    transparent;
 
 // Navbar
 $navbar-height:                      60px;
@@ -40,27 +134,25 @@ $navbar-default-bg:                  #272727;
 $navbar-default-color:               #ffffff;
 $navbar-default-link-color:          $navbar-default-color;
 $navbar-default-link-hover-color:    darken($navbar-default-color, 20%);
+$navbar-default-toggle-icon-bar-bg:  #fff;
+$navbar-default-toggle-hover-bg:     transparent;
+$navbar-default-toggle-border-color: transparent;
+$navbar-default-border:              transparent;
 $navbar-margin-bottom:               0;
+
 
 // Navs
 $nav-link-padding:                   8px 15px;
 $nav-link-hover-bg:                  transparent;
 
-// Navbar
-$navbar-default-toggle-icon-bar-bg:  #fff;
-$navbar-default-toggle-hover-bg:     transparent;
-$navbar-default-toggle-border-color: transparent;
-$navbar-default-border:              transparent;
-
-
-// flyout
+// Flyout
 $flyout-content-width:               400px;
 $flyout-width-sm:                    calc(((100vw - #{$container-sm} ) / 2) + #{$flyout-content-width});
 $flyout-width-md:                    calc(((100vw - #{$container-md} ) / 2) + #{$flyout-content-width});
 $flyout-width-lg:                    calc(((100vw - #{$container-lg} ) / 2) + #{$flyout-content-width});                        
 $flyout-z-index:                     ($zindex-navbar - 1);
 
-$side-flyout-bg:                     $violet;
+$side-flyout-bg:                     $brand-primary;
 $side-flyout-animation:              .2s linear;
 
 // Main menu
@@ -81,13 +173,13 @@ $breadcrumb-padding-horizontal:     0;
 //** Breadcrumb background color
 $breadcrumb-bg:                     transparent;
 //** Breadcrumb text color
-$breadcrumb-color:                  $violet;
+$breadcrumb-color:                  $brand-primary;
 //** Breadcrumb text sizde
 $breadcrumb-font-size:              16px;
 //** Text color links
-$breadcrumb-link-color:             $violet;
+$breadcrumb-link-color:             $brand-primary;
 //** Text color of current page in the breadcrumb
-$breadcrumb-active-color:           $violet;
+$breadcrumb-active-color:           $brand-primary;
 
 //== Buttons
 //
@@ -103,9 +195,9 @@ $btn-border-colored:                false;
 //##
 
 //** Text color for `<input>`s
-$input-color:                    $violet;
+$input-color:                    $brand-primary;
 //** `<input>` border color
-$input-border:                   $violet;
+$input-border:                   $violet-light;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -117,7 +209,55 @@ $input-border-radius-large:      0;
 $input-border-radius-small:      0;
 
 //** Border color for inputs on focus
-$input-border-focus:             $violet;
+$input-border-focus:             $brand-primary;
 
 //** Default `.form-control` height
 $input-height-base:              42px;
+
+//== Custom form elements
+//
+//##
+$default-custom-element-size:     25px;
+$label-font-size:                 20px;
+$label-disabled-color:            $gray-light;
+
+//** Radio Buttons
+$radio-fill-color:                $brand-primary;
+$radio-empty-color:               $violet-light;
+$radio-border:                    2px solid $radio-fill-color;
+$radio-size:                      $default-custom-element-size;
+$radio-disabled-color:            $violet-medium;
+
+//** Checkboxes
+$checkbox-size:                   $default-custom-element-size;
+$checkbox-fill-color:             $brand-primary;
+$checkbox-empty-border:           $violet-medium;
+$checkbox-disabled-fill-color:    $violet-medium;
+
+//== User login, register and forgot password forms
+//
+//##
+$user-form-width:                 630px;
+$user-form-input-height:          62px;
+
+//== Alerts
+//
+//## Define alert colors, border radius, and padding.
+
+$alert-border-radius:         $border-radius-base;
+
+$alert-success-bg:            $green;
+$alert-success-text:          white;
+$alert-success-border:        $green;
+
+$alert-info-bg:               $violet;
+$alert-info-text:             white;
+$alert-info-border:           $violet;
+
+$alert-warning-bg:            $state-warning-bg;
+$alert-warning-text:          white;
+$alert-warning-border:        $state-warning-bg;
+
+$alert-danger-bg:             $red;
+$alert-danger-text:           white;
+$alert-danger-border:         $red;

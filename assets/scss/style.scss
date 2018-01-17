@@ -1,64 +1,55 @@
+
+
+
+// Bootstrap files with overrides
+// Core variables and mixins
+@import "../bootstrap/assets/stylesheets/bootstrap/variables";
+// variables overrides
+@import "default-variables";
+
+@import "../bootstrap/assets/stylesheets/bootstrap/mixins";
+// mixins overrides
+@import "mixin-overrides";
+
+// Bootstrap Framework.
+@import "bootstrap";
+
 // Default variables.
 @import "utilities/utilities";
 
-
-// Bootstrap Framework.\// Core variables and mixins
-@import "../bootstrap/assets/stylesheets/bootstrap/variables";
-// variables override
-@import "default-variables";
-@import "../bootstrap/assets/stylesheets/bootstrap/mixins";
-// mixins override
-@import "mixin-overrides";
-
-// Reset and dependencies
-@import "../bootstrap/assets/stylesheets/bootstrap/normalize";
-@import "../bootstrap/assets/stylesheets/bootstrap/print";
-@import "../bootstrap/assets/stylesheets/bootstrap/glyphicons";
-
-// Core CSS
-@import "../bootstrap/assets/stylesheets/bootstrap/scaffolding";
-@import "../bootstrap/assets/stylesheets/bootstrap/type";
-@import "../bootstrap/assets/stylesheets/bootstrap/code";
-@import "../bootstrap/assets/stylesheets/bootstrap/grid";
-@import "../bootstrap/assets/stylesheets/bootstrap/tables";
-@import "../bootstrap/assets/stylesheets/bootstrap/forms";
-@import "../bootstrap/assets/stylesheets/bootstrap/buttons";
-
-// Components
-@import "../bootstrap/assets/stylesheets/bootstrap/component-animations";
-@import "../bootstrap/assets/stylesheets/bootstrap/dropdowns";
-@import "../bootstrap/assets/stylesheets/bootstrap/button-groups";
-@import "../bootstrap/assets/stylesheets/bootstrap/input-groups";
-@import "../bootstrap/assets/stylesheets/bootstrap/navs";
-@import "../bootstrap/assets/stylesheets/bootstrap/navbar";
-@import "../bootstrap/assets/stylesheets/bootstrap/breadcrumbs";
-@import "../bootstrap/assets/stylesheets/bootstrap/pagination";
-@import "../bootstrap/assets/stylesheets/bootstrap/pager";
-@import "../bootstrap/assets/stylesheets/bootstrap/labels";
-@import "../bootstrap/assets/stylesheets/bootstrap/badges";
-@import "../bootstrap/assets/stylesheets/bootstrap/jumbotron";
-@import "../bootstrap/assets/stylesheets/bootstrap/thumbnails";
-@import "../bootstrap/assets/stylesheets/bootstrap/alerts";
-@import "../bootstrap/assets/stylesheets/bootstrap/progress-bars";
-@import "../bootstrap/assets/stylesheets/bootstrap/media";
-@import "../bootstrap/assets/stylesheets/bootstrap/list-group";
-@import "../bootstrap/assets/stylesheets/bootstrap/panels";
-@import "../bootstrap/assets/stylesheets/bootstrap/responsive-embed";
-@import "../bootstrap/assets/stylesheets/bootstrap/wells";
-@import "../bootstrap/assets/stylesheets/bootstrap/close";
-
-// Components w/ JavaScript
-@import "../bootstrap/assets/stylesheets/bootstrap/modals";
-@import "../bootstrap/assets/stylesheets/bootstrap/tooltip";
-@import "../bootstrap/assets/stylesheets/bootstrap/popovers";
-@import "../bootstrap/assets/stylesheets/bootstrap/carousel";
-
-// Utility classes
-@import "../bootstrap/assets/stylesheets/bootstrap/utilities";
-@import "../bootstrap/assets/stylesheets/bootstrap/responsive-utilities";
-
 // Generated Icon font
 @import "icon-font";
+
+// specific Drupal libraries are used.
+@import "component/alert";
+@import "component/ajax";
+@import "component/breadcrumbs";
+@import "component/buttons";
+@import "component/close";
+@import "component/field";
+@import "component/file";
+@import "component/cart-block";
+@import "component/filter";
+@import "component/form";
+@import "component/icon";
+@import "component/navbar";
+@import "component/node";
+@import "component/panel";
+@import "component/progress-bar";
+@import "component/tables";
+@import "component/table-drag";
+@import "component/tabs";
+@import "component/toolbar";
+@import "component/toggle";
+@import "component/side-flyout";
+
+// jQuery UI style overrides.
+@import "jquery-ui/autocomplete";
+
+// Custom form elements
+@import "custom-form-elements/radio-buttons";
+@import "custom-form-elements/checkboxes";
+@import "custom-form-elements/number";
 
 // Regions
 @import "regions/top-navigation";
@@ -68,7 +59,15 @@
 
 // Pages
 @import "pages/front";
+@import "pages/user";
 @import "pages/product";
 
-// Base-theme overrides.
-@import 'overrides';
+// Commerce
+@import "commerce/commerce";
+@import "commerce/progress";
+@import "commerce/sidebar";
+
+// Overrides
+@import "overrides";
+
+

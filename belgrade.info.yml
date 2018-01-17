@@ -9,7 +9,7 @@ package: 'Bootstrap'
 regions:
   navigation: 'Navigation'
   top_navigation: 'Navigation (Top bar)'
-  header: 'Top Bar'
+  header: 'Header'
   highlighted: 'Highlighted'
   help: 'Help'
   content: 'Content'

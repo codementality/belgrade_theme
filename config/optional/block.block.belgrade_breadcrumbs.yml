@@ -7,8 +7,8 @@ dependencies:
     - belgrade
 id: belgrade_breadcrumbs
 theme: belgrade
-region: highlighted
-weight: -7
+region: header
+weight: -6
 provider: null
 plugin: system_breadcrumb_block
 settings:
