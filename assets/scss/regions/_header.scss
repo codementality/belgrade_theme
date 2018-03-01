@@ -20,7 +20,7 @@
       width: 100%;
     }
   }
-  .menu-catalog-menu {
+  .menu-catalog {
     display: none;
     justify-content: space-between;
     width: 100%;
@@ -57,7 +57,7 @@
   // responsive overrides
   @media screen and (min-width: $grid-float-breakpoint) {
     padding: 90px 0 75px 0;
-    .menu-catalog-menu {
+    .menu-catalog {
       display: flex;
     }
   }
