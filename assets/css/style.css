@@ -5801,10 +5801,10 @@ body {
   font-family: "icons";
   src: url("../fonts/icons.eot?c51f97f899226e04a4fd8f2761edeada?#iefix") format("embedded-opentype"), url("../fonts/icons.woff2?c51f97f899226e04a4fd8f2761edeada") format("woff2"), url("../fonts/icons.woff?c51f97f899226e04a4fd8f2761edeada") format("woff"), url("../fonts/icons.ttf?c51f97f899226e04a4fd8f2761edeada") format("truetype"), url("../fonts/icons.svg?c51f97f899226e04a4fd8f2761edeada#icons") format("svg"); }
 
-.glyph, .close-btn {
+.glyph, .close-btn, .block-facets .block-title:before {
   line-height: 1; }
 
-.glyph:before, .close-btn:before, .checkout-progress--step__previous:after {
+.glyph:before, .close-btn:before, .block-facets .block-title:before, .checkout-progress--step__previous:after {
   content: "";
   display: inline-block;
   font-family: icons !important;
@@ -5821,7 +5821,7 @@ body {
 .glyph-checked-rounded:before, .checkout-progress--step__previous:after {
   content: "\f103"; }
 
-.glyph-close:before, .close-btn:before {
+.glyph-close:before, .close-btn:before, .block-facets .block-title:before {
   content: "\f104"; }
 
 .glyph-facebook:before {
@@ -6633,6 +6633,41 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0); }
+
+.block-facets {
+  padding: 30px;
+  background-color: rgba(65, 68, 159, 0.1); }
+  .block-facets .block-title {
+    position: relative;
+    margin-bottom: 20px;
+    cursor: pointer; }
+    .block-facets .block-title:before {
+      position: absolute;
+      right: 0;
+      color: #41449f;
+      font-size: 14px;
+      line-height: 24px;
+      -webkit-transition: -webkit-transform .1s linear;
+      transition: -webkit-transform .1s linear;
+      transition: transform .1s linear;
+      transition: transform .1s linear, -webkit-transform .1s linear; }
+    .block-facets .block-title[aria-expanded="false"]:before {
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
+  .block-facets label {
+    font-size: 16px; }
+  .block-facets [type="checkbox"]:checked + label {
+    font-weight: bold; }
+
+.facets-widget-checkbox .item-list__checkbox {
+  margin: 0;
+  padding: 0; }
+  .facets-widget-checkbox .item-list__checkbox .facet-item {
+    margin-bottom: 5px;
+    list-style: none; }
+    .facets-widget-checkbox .item-list__checkbox .facet-item .facets-widget- {
+      padding: 10px 0; }
 
 /**
  * jQuery UI autocomplete widget style overrides.

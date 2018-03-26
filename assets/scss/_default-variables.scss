@@ -22,6 +22,7 @@ $red-hover:     rgba($red, 80);
 
 // Brand colors
 $brand-primary:         $violet;
+$brand-primary-o:       rgba($violet, 0.1);
 $brand-success:         $green;
 $brand-info:            $violet;
 $brand-warning:         #f0ad4e; // default bootstrap
@@ -149,7 +150,7 @@ $nav-link-hover-bg:                  transparent;
 $flyout-content-width:               400px;
 $flyout-width-sm:                    calc(((100vw - #{$container-sm} ) / 2) + #{$flyout-content-width});
 $flyout-width-md:                    calc(((100vw - #{$container-md} ) / 2) + #{$flyout-content-width});
-$flyout-width-lg:                    calc(((100vw - #{$container-lg} ) / 2) + #{$flyout-content-width});                        
+$flyout-width-lg:                    calc(((100vw - #{$container-lg} ) / 2) + #{$flyout-content-width});
 $flyout-z-index:                     ($zindex-navbar - 1);
 
 $side-flyout-bg:                     $brand-primary;
@@ -261,3 +262,9 @@ $alert-warning-border:        $state-warning-bg;
 $alert-danger-bg:             $red;
 $alert-danger-text:           white;
 $alert-danger-border:         $red;
+
+//==  Facet block
+//
+//##
+$facet-block-text-size:        16px;
+$facet-block-toggle-size:      14px;
