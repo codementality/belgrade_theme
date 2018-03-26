@@ -98,7 +98,6 @@
 {# Main #}
 {% block main %}
   <div role="main" class="main-container js-quickedit-main-content">
-    <div class="row">
       {# Off canvas side navigation #}
       {% if page.navigation %}
         <div id="off-canvas" class="side-flyout collapse left">
@@ -113,7 +112,25 @@
         {% endblock %}
       {% endif %}
 
-      <div class="container">
+
+
+    <div class="container">
+      {# Highlighted #}
+      {% if page.highlighted %}
+        {% block highlighted %}
+          <div class="highlighted">{{ page.highlighted }}</div>
+          {% endblock %}
+      {% endif %}
+
+      {# Breadcrumbs #}
+      {% if breadcrumb %}
+        {% block breadcrumb %}
+          {{ breadcrumb }}
+        {% endblock %}
+      {% endif %}
+
+      <div class="row">
+
         {# Sidebar First #}
         {% if page.sidebar_first %}
           {% block sidebar_first %}
@@ -131,21 +148,8 @@
         page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9'
         ]
         %}
+
         <section{{ content_attributes.addClass(content_classes) }}>
-
-          {# Highlighted #}
-          {% if page.highlighted %}
-            {% block highlighted %}
-              <div class="highlighted">{{ page.highlighted }}</div>
-            {% endblock %}
-          {% endif %}
-
-          {# Breadcrumbs #}
-          {% if breadcrumb %}
-            {% block breadcrumb %}
-              {{ breadcrumb }}
-            {% endblock %}
-          {% endif %}
 
           {# Action Links #}
           {% if action_links %}
