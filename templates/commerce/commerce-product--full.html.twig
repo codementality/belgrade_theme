@@ -24,6 +24,7 @@
   set classes = [
     'commerce-product',
     'commerce-product--' ~ product_entity.bundle|clean_class,
+    'commerce-product--full',
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
@@ -33,7 +34,7 @@
     {{- product.variation_field_images -}}
     </div>
     <div class="col-md-6">
-      <div class="commerce-product--contents">
+      <div class="commerce-product__contents">
         {{- product.title -}}
         {{- product.variation_price -}}
         {{- product|without('field_images','variation_attributes','variation_price','variation_field_images') -}}

@@ -1,0 +1,22 @@
+//
+// Product catalog view mode
+// --------------------------------------------------
+.commerce-product--catalog{
+  margin: 15px 0;
+  border-bottom: 2px solid $brand-primary;
+  &__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    font-size: $font-size-h4;
+    .field--name-title{
+      line-height: 1.2;
+      padding-right: 10px;
+      a{
+        font-weight: bold;
+        color: $gray-dark;
+      }
+    }
+  }
+}

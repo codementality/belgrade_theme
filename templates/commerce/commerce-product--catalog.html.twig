@@ -19,6 +19,18 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes }}>
-  {{- product|without('variation_attributes') -}}
+{%
+  set classes = [
+    'commerce-product',
+    'commerce-product--' ~ product_entity.bundle|clean_class,
+    'commerce-product--catalog'
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+    {{- product.field_images -}}
+    {{- product.variation_field_images -}}
+    <div class="commerce-product--catalog__info">
+      {{- product|without('variation_attributes', 'field_images', 'variation_field_images') -}}
+    </div>
 </article>

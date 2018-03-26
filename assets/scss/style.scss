@@ -61,11 +61,12 @@
 // Pages
 @import "pages/front";
 @import "pages/user";
-@import "pages/product";
 
 // Commerce
 @import "commerce/commerce";
 @import "commerce/progress";
+@import "commerce/product-catalog";
+@import "commerce/product-full";
 @import "commerce/sidebar";
 
 // Overrides
