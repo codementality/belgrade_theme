@@ -22,16 +22,16 @@
 {{ attach_library('belgrade/commerce.product-images') }}
 {%
   set classes = [
-    'commerce-product',
-    'commerce-product--' ~ product_entity.bundle|clean_class,
-    'commerce-product--full',
-  ]
+  'commerce-product',
+  'commerce-product--' ~ product_entity.bundle|clean_class,
+  'commerce-product--full',
+]
 %}
 <article{{ attributes.addClass(classes) }}>
   <div class="row">
     <div class="col-md-6">
-    {{- product.field_images -}}
-    {{- product.variation_field_images -}}
+      {{- product.field_images -}}
+      {{- product.variation_field_images -}}
     </div>
     <div class="col-md-6">
       <div class="commerce-product__contents">

@@ -40,47 +40,47 @@
 #}
 {%
   set classes = [
-    'field',
-    'field--name-' ~ field_name|clean_class,
-    'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display,
-  ]
+  'field',
+  'field--name-' ~ field_name|clean_class,
+  'field--type-' ~ field_type|clean_class,
+  'field--label-' ~ label_display,
+]
 %}
 {%
   set title_classes = [
-    'field--label',
-    label_display == 'visually_hidden' ? 'sr-only',
-  ]
+  'field--label',
+  label_display == 'visually_hidden' ? 'sr-only',
+]
 %}
 
-  <div{{ attributes.addClass(classes) }}>
-    {% if not label_hidden %}
-      <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-    {% endif %}
+<div{{ attributes.addClass(classes) }}>
+  {% if not label_hidden %}
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  {% endif %}
 
 
-    {% for item in items %}
+  {% for item in items %}
 
     {% set image_url = file_url(item.content['#item'].entity.uri.value) %}
     {% set style = "background-image:url("~ image_url ~")" %}
 
-      {% if loop.first %}
-        {# main image #}
-        <div class="product-img--main" data-scale="1.6" data-image="{{ image_url }}"></div>
-        {% if (items|length > 1)  %}
+    {% if loop.first %}
+      {# main image #}
+      <div class="product-img--main" data-scale="1.6" data-image="{{ image_url }}"></div>
+      {% if (items|length > 1)  %}
         {# check if there is more than one item #}
-          <div class="product-img--thumbs">
-            <a class="product-img--thumb__switcher"><i class="glyph glyph-arrows"></i></a>
-            <div{{ item.attributes.addClass('product-img--thumb').setAttribute('style', style) }}>{{ item.content }}</div>
-        {% endif %}
-      {% else %}
-         <div{{ item.attributes.addClass('product-img--thumb').setAttribute('style', style) }}>{{ item.content }}</div>
+        <div class="product-img--thumbs">
+        <a class="product-img--thumb__switcher"><i class="glyph glyph-arrows"></i></a>
+        <div{{ item.attributes.addClass('product-img--thumb').setAttribute('style', style) }}>{{ item.content }}</div>
       {% endif %}
+    {% else %}
+      <div{{ item.attributes.addClass('product-img--thumb').setAttribute('style', style) }}>{{ item.content }}</div>
+    {% endif %}
 
-      {% if loop.last and (items|length > 1) %}
-       </div>
-      {% endif %}
+    {% if loop.last and (items|length > 1) %}
+      </div>
+    {% endif %}
 
-    {% endfor %}
-  </div>
+  {% endfor %}
+</div>
 

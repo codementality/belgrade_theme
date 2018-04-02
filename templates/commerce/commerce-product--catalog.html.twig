@@ -21,16 +21,19 @@
 #}
 {%
   set classes = [
-    'commerce-product',
-    'commerce-product--' ~ product_entity.bundle|clean_class,
-    'commerce-product--catalog'
-  ]
+  'commerce-product',
+  'commerce-product--' ~ product_entity.bundle|clean_class,
+  'commerce-product--catalog'
+]
 %}
 
 <article{{ attributes.addClass(classes) }}>
+  <div class="commerce-product--catalog__image">
     {{- product.field_images -}}
     {{- product.variation_field_images -}}
-    <div class="commerce-product--catalog__info">
-      {{- product|without('variation_attributes', 'field_images', 'variation_field_images') -}}
-    </div>
+    <a href="{{ product_url }}" class="commerce-product--catalog__hover-text"><i class="glyph glyph-look"></i>{{'View product'|t}}</a>
+  </div>
+  <div class="commerce-product--catalog__info">
+    {{- product|without('variation_attributes', 'field_images', 'variation_field_images') -}}
+  </div>
 </article>
