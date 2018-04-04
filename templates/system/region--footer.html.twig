@@ -18,9 +18,6 @@
 
 {% block region_content %}
   <div class="footer--contents container">
-    <a class="footer--logo" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-      <img class="img-responsive" src="/{{ active_theme_path() }}/assets/images/logo-footer.svg" alt="{{ 'Home'|t }}" />
-    </a>
     {{ parent() }}
   </div>
 {% endblock %}

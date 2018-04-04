@@ -12,14 +12,14 @@
 
   // Branding
   &--logo {
-    display: inline-block;
+    display: block;
     width: 45px;
     margin: 10px 0;
   }
 
   // Footer content
   &--contents {
-    text-align: center; 
+    text-align: center;
     // social menu title
     h2 {
       font-size: 18px;

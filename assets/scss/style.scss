@@ -65,10 +65,12 @@
 
 // Commerce
 @import "commerce/commerce";
+@import "commerce/cart";
 @import "commerce/progress";
 @import "commerce/product-catalog";
 @import "commerce/product-full";
 @import "commerce/sidebar";
+@import "commerce/demo-frontpage";
 
 // Overrides
 @import "overrides";
