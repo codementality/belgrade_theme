@@ -40,3 +40,24 @@
     background-color: $color;
   }
 }
+
+// mixin used to invert colors on dark bg
+@mixin inverted-color{
+  @extend %inverted-color-section;
+}
+
+
+@mixin well-variant($class, $bgcolor) {
+  .well-#{$class} {
+    background-color: $bgcolor;
+    @include inverted-color;
+    .btn-white{
+      background-color: $bgcolor;
+      color: white;
+      &:hover{
+        background-color: white;
+        color: $bgcolor;
+      }
+    }
+  }
+}

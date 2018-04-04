@@ -15,14 +15,23 @@
   }
 }
 
+.btn-link{
+  &:active,
+  &:focus,
+  &:active:focus,
+  &:hover{
+    outline: 0;
+  }
+}
+
 // Only one button version
 .btn-default{
-  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);  
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
 }
 
 .btn-white{
-  @include button-variant(white, $brand-primary, white);  
+  @include button-variant(white, $brand-primary, white);
 }
 .btn-white-inverted{
-  @include button-variant($brand-primary, white, white);  
+  @include button-variant($brand-primary, white, white);
 }

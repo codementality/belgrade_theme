@@ -1093,7 +1093,7 @@ img {
   height: auto; }
 
 .img-rounded {
-  border-radius: 6px; }
+  border-radius: 0; }
 
 .img-thumbnail {
   padding: 4px;
@@ -1467,7 +1467,7 @@ kbd {
   font-size: 90%;
   color: #fff;
   background-color: #333;
-  border-radius: 3px;
+  border-radius: 0;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
   kbd kbd {
     padding: 0;
@@ -4039,13 +4039,13 @@ tbody.collapse.in {
 
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px; }
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0; }
 
 .pagination-lg > li:last-child > a,
 .pagination-lg > li:last-child > span {
-  border-bottom-right-radius: 6px;
-  border-top-right-radius: 6px; }
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0; }
 
 .pagination-sm > li > a,
 .pagination-sm > li > span {
@@ -4055,13 +4055,13 @@ tbody.collapse.in {
 
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px; }
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0; }
 
 .pagination-sm > li:last-child > a,
 .pagination-sm > li:last-child > span {
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px; }
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0; }
 
 .pager {
   padding-left: 0;
@@ -4207,7 +4207,7 @@ a.badge:hover, a.badge:focus {
     border-top-color: #d5d5d5; }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    border-radius: 6px;
+    border-radius: 0;
     padding-left: 15px;
     padding-right: 15px; }
   .jumbotron .container {
@@ -4913,26 +4913,6 @@ button.list-group-item-danger {
 .embed-responsive-4by3 {
   padding-bottom: 75%; }
 
-.well {
-  min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
-  border-radius: 0;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
-  .well blockquote {
-    border-color: #ddd;
-    border-color: rgba(0, 0, 0, 0.15); }
-
-.well-lg {
-  padding: 24px;
-  border-radius: 6px; }
-
-.well-sm {
-  padding: 9px;
-  border-radius: 3px; }
-
 .close {
   float: right;
   font-size: 24px;
@@ -4997,7 +4977,7 @@ button.close {
   background-color: #fff;
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 0;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: 0; }
@@ -5211,7 +5191,7 @@ button.close {
   background-clip: padding-box;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 0;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
   .popover.top {
     margin-top: -10px; }
@@ -5228,7 +5208,7 @@ button.close {
   font-size: 16px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
-  border-radius: 5px 5px 0 0; }
+  border-radius: -1 -1 0 0; }
 
 .popover-content {
   padding: 9px 14px; }
@@ -5758,44 +5738,54 @@ body {
   .has-warning .select-wrapper:after, .has-warning .panel-title[data-toggle="collapse"]:after {
     color: #8a6d3b; }
 
-.user-pass,
+.well-primary, .well-success, .user-pass,
 .user-register-form {
   color: white; }
-  .user-pass .form-header:after,
+  .well-primary .form-header:after, .well-success .form-header:after, .user-pass .form-header:after,
   .user-register-form .form-header:after {
     background-color: white; }
-  .user-pass a,
+  .well-primary a, .well-success a, .user-pass a,
   .user-register-form a {
     color: white; }
-    .user-pass a:focus:hover,
-    .user-register-form a:focus:hover, .user-pass a:focus,
-    .user-register-form a:focus, .user-pass a:hover,
+    .well-primary a:focus:hover, .well-success a:focus:hover, .user-pass a:focus:hover,
+    .user-register-form a:focus:hover, .well-primary a:focus, .well-success a:focus, .user-pass a:focus,
+    .user-register-form a:focus, .well-primary a:hover, .well-success a:hover, .user-pass a:hover,
     .user-register-form a:hover {
       color: white;
       opacity: .6; }
-  .user-pass .form-control,
+  .well-primary .btn-link, .well-success .btn-link, .user-pass .btn-link,
+  .user-register-form .btn-link {
+    color: white; }
+  .well-primary .form-control, .well-success .form-control, .user-pass .form-control,
   .user-register-form .form-control {
     border-color: white;
     background-color: transparent;
     color: white; }
-  .user-pass .select-wrapper::after,
+  .well-primary .select-wrapper::after, .well-success .select-wrapper::after, .user-pass .select-wrapper::after,
   .user-register-form .select-wrapper::after {
     color: white; }
-  .user-pass .panel-default > .panel-heading,
+  .well-primary .panel-default > .panel-heading, .well-success .panel-default > .panel-heading, .user-pass .panel-default > .panel-heading,
   .user-register-form .panel-default > .panel-heading {
     border-color: white; }
-  .user-pass [type="checkbox"]:checked + label::after,
+  .well-primary [type="checkbox"]:checked + label::after, .well-success [type="checkbox"]:checked + label::after, .user-pass [type="checkbox"]:checked + label::after,
   .user-register-form [type="checkbox"]:checked + label::after {
     border-color: white;
     background: white; }
-  .user-pass [type="checkbox"]:checked + label::before,
+  .well-primary [type="checkbox"]:checked + label::before, .well-success [type="checkbox"]:checked + label::before, .user-pass [type="checkbox"]:checked + label::before,
   .user-register-form [type="checkbox"]:checked + label::before {
     border-right: 2px solid #41449f;
     border-bottom: 2px solid #41449f; }
-  .user-pass .select-wrapper:after,
-  .user-register-form .select-wrapper:after, .user-pass .panel-title[data-toggle="collapse"]:after,
+  .well-primary .select-wrapper:after, .well-success .select-wrapper:after, .user-pass .select-wrapper:after,
+  .user-register-form .select-wrapper:after, .well-primary .panel-title[data-toggle="collapse"]:after, .well-success .panel-title[data-toggle="collapse"]:after, .user-pass .panel-title[data-toggle="collapse"]:after,
   .user-register-form .panel-title[data-toggle="collapse"]:after {
     color: white; }
+  .well-primary .btn:hover, .well-success .btn:hover, .user-pass .btn:hover,
+  .user-register-form .btn:hover {
+    opacity: 1; }
+  .well-primary .table > tfoot > tr > td, .well-success .table > tfoot > tr > td, .user-pass .table > tfoot > tr > td,
+  .user-register-form .table > tfoot > tr > td, .well-primary .table > tbody > tr > td, .well-success .table > tbody > tr > td, .user-pass .table > tbody > tr > td,
+  .user-register-form .table > tbody > tr > td {
+    border-top: 2px solid rgba(255, 255, 255, 0.1); }
 
 @font-face {
   font-family: "icons";
@@ -5928,6 +5918,9 @@ html.js .ajax-new-content:empty {
     background-color: transparent;
     box-shadow: none; }
 
+.btn-link:active, .btn-link:focus, .btn-link:active:focus, .btn-link:hover {
+  outline: 0; }
+
 .btn-default {
   color: #41449f;
   background-color: #fff;
@@ -5953,38 +5946,44 @@ html.js .ajax-new-content:empty {
     color: #fff;
     background-color: #41449f; }
 
-.btn-white, .user-pass .btn,
+.btn-white, .well-primary .btn, .well-success .btn, .user-pass .btn,
 .user-register-form .btn {
   color: white;
   background-color: #41449f;
   border-color: white; }
-  .btn-white:focus, .user-pass .btn:focus,
-  .user-register-form .btn:focus, .btn-white.focus, .user-pass .focus.btn,
+  .btn-white:focus, .well-primary .btn:focus, .well-success .btn:focus, .user-pass .btn:focus,
+  .user-register-form .btn:focus, .btn-white.focus, .well-primary .focus.btn, .well-success .focus.btn, .user-pass .focus.btn,
   .user-register-form .focus.btn {
     color: #41449f;
     background-color: white;
     border-color: white; }
-  .btn-white:hover, .user-pass .btn:hover,
+  .btn-white:hover, .well-primary .btn:hover, .well-success .btn:hover, .user-pass .btn:hover,
   .user-register-form .btn:hover {
     color: #41449f;
     background-color: white;
     border-color: white; }
-  .btn-white:active, .user-pass .btn:active,
-  .user-register-form .btn:active, .btn-white.active, .user-pass .active.btn,
+  .btn-white:active, .well-primary .btn:active, .well-success .btn:active, .user-pass .btn:active,
+  .user-register-form .btn:active, .btn-white.active, .well-primary .active.btn, .well-success .active.btn, .user-pass .active.btn,
   .user-register-form .active.btn,
-  .open > .btn-white.dropdown-toggle, .user-pass
+  .open > .btn-white.dropdown-toggle, .well-primary
+  .open > .dropdown-toggle.btn, .well-success
+  .open > .dropdown-toggle.btn, .user-pass
   .open > .dropdown-toggle.btn,
   .user-register-form
   .open > .dropdown-toggle.btn {
     background-image: none; }
-  .btn-white.disabled:hover, .user-pass .disabled.btn:hover,
-  .user-register-form .disabled.btn:hover, .btn-white.disabled:focus, .user-pass .disabled.btn:focus,
-  .user-register-form .disabled.btn:focus, .btn-white.disabled.focus, .user-pass .disabled.focus.btn,
-  .user-register-form .disabled.focus.btn, .btn-white[disabled]:hover, .user-pass [disabled].btn:hover,
-  .user-register-form [disabled].btn:hover, .btn-white[disabled]:focus, .user-pass [disabled].btn:focus,
-  .user-register-form [disabled].btn:focus, .btn-white[disabled].focus, .user-pass [disabled].focus.btn,
+  .btn-white.disabled:hover, .well-primary .disabled.btn:hover, .well-success .disabled.btn:hover, .user-pass .disabled.btn:hover,
+  .user-register-form .disabled.btn:hover, .btn-white.disabled:focus, .well-primary .disabled.btn:focus, .well-success .disabled.btn:focus, .user-pass .disabled.btn:focus,
+  .user-register-form .disabled.btn:focus, .btn-white.disabled.focus, .well-primary .disabled.focus.btn, .well-success .disabled.focus.btn, .user-pass .disabled.focus.btn,
+  .user-register-form .disabled.focus.btn, .btn-white[disabled]:hover, .well-primary [disabled].btn:hover, .well-success [disabled].btn:hover, .user-pass [disabled].btn:hover,
+  .user-register-form [disabled].btn:hover, .btn-white[disabled]:focus, .well-primary [disabled].btn:focus, .well-success [disabled].btn:focus, .user-pass [disabled].btn:focus,
+  .user-register-form [disabled].btn:focus, .btn-white[disabled].focus, .well-primary [disabled].focus.btn, .well-success [disabled].focus.btn, .user-pass [disabled].focus.btn,
   .user-register-form [disabled].focus.btn,
   fieldset[disabled] .btn-white:hover,
+  fieldset[disabled] .well-primary .btn:hover, .well-primary
+  fieldset[disabled] .btn:hover,
+  fieldset[disabled] .well-success .btn:hover, .well-success
+  fieldset[disabled] .btn:hover,
   fieldset[disabled] .user-pass .btn:hover, .user-pass
   fieldset[disabled] .btn:hover,
   fieldset[disabled]
@@ -5992,6 +5991,10 @@ html.js .ajax-new-content:empty {
   .user-register-form
   fieldset[disabled] .btn:hover,
   fieldset[disabled] .btn-white:focus,
+  fieldset[disabled] .well-primary .btn:focus, .well-primary
+  fieldset[disabled] .btn:focus,
+  fieldset[disabled] .well-success .btn:focus, .well-success
+  fieldset[disabled] .btn:focus,
   fieldset[disabled] .user-pass .btn:focus, .user-pass
   fieldset[disabled] .btn:focus,
   fieldset[disabled]
@@ -5999,6 +6002,10 @@ html.js .ajax-new-content:empty {
   .user-register-form
   fieldset[disabled] .btn:focus,
   fieldset[disabled] .btn-white.focus,
+  fieldset[disabled] .well-primary .focus.btn, .well-primary
+  fieldset[disabled] .focus.btn,
+  fieldset[disabled] .well-success .focus.btn, .well-success
+  fieldset[disabled] .focus.btn,
   fieldset[disabled] .user-pass .focus.btn, .user-pass
   fieldset[disabled] .focus.btn,
   fieldset[disabled]
@@ -6007,7 +6014,7 @@ html.js .ajax-new-content:empty {
   fieldset[disabled] .focus.btn {
     background-color: #41449f;
     border-color: white; }
-  .btn-white .badge, .user-pass .btn .badge,
+  .btn-white .badge, .well-primary .btn .badge, .well-success .btn .badge, .user-pass .btn .badge,
   .user-register-form .btn .badge {
     color: #41449f;
     background-color: white; }
@@ -6296,7 +6303,7 @@ body {
   body.navbar-is-static-top {
     margin-top: 0; }
   body.navbar-is-fixed-top {
-    margin-top: 75px; }
+    margin-top: 60px; }
   body.navbar-is-fixed-bottom {
     padding-bottom: 75px; }
   @media screen and (min-width: 768px) {
@@ -6586,6 +6593,39 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
   @media screen and (min-width: 768px) {
     .toggle-btn {
       padding: 6px 0; } }
+
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5; }
+  .well blockquote {
+    border-color: #ddd;
+    border-color: rgba(0, 0, 0, 0.15); }
+
+.well-primary {
+  background-color: #41449f; }
+  .well-primary .btn-white, .well-primary .btn {
+    background-color: #41449f;
+    color: white; }
+    .well-primary .btn-white:hover, .well-primary .btn:hover {
+      background-color: white;
+      color: #41449f; }
+
+.well-success {
+  background-color: #00746b; }
+  .well-success .btn-white, .well-success .btn {
+    background-color: #00746b;
+    color: white; }
+    .well-success .btn-white:hover, .well-success .btn:hover {
+      background-color: white;
+      color: #00746b; }
+
+.well-lg {
+  padding: 37px; }
+
+.well-sm {
+  padding: 9px; }
 
 .side-flyout {
   overflow: auto;
@@ -6931,8 +6971,7 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      margin-right: -15px;
-      width: 100%; }
+      margin-right: -15px; }
   .region-header .menu-catalog {
     display: none;
     -webkit-box-pack: justify;

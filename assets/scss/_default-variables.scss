@@ -41,7 +41,6 @@ $font-family-base:       $font-family-sans-serif;
 $font-size-base:         16px;
 $font-size-h1:           48px;
 
-
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
@@ -58,7 +57,10 @@ $link-hover-color:      darken($link-color, 15%);
 //** Link hover decoration.
 $link-hover-decoration: none;
 
+// remove border radius
 $border-radius-base:     0;
+$border-radius-small:    0;
+$border-radius-large:    0;
 
 
 //== Buttons
@@ -262,6 +264,12 @@ $alert-warning-border:        $state-warning-bg;
 $alert-danger-bg:             $red;
 $alert-danger-text:           white;
 $alert-danger-border:         $red;
+
+//== Wells
+//
+//##
+$well-bg:                     #f5f5f5 !default;
+$well-border:                 darken($well-bg, 7%) !default;
 
 //==  Facet block
 //
