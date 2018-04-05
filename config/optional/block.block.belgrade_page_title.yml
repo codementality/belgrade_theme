@@ -19,6 +19,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/product/*'
+    pages: "/product/*\r\n/products*"
     negate: true
     context_mapping: {  }
