@@ -14,3 +14,9 @@
     }
   }
 }
+
+.table-striped-alt {
+  > tbody > tr:nth-of-type(even) {
+    background-color: $table-bg-accent;
+  }
+}
