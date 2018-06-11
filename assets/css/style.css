@@ -6767,6 +6767,11 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
 .well-sm {
   padding: 9px; }
 
+.menu-account li {
+  display: inline-block; }
+  .menu-account li a {
+    color: white; }
+
 .side-flyout {
   overflow: auto;
   padding-top: 80px;
