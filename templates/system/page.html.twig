@@ -168,7 +168,9 @@
           {# Content #}
           {% block content %}
             <a id="main-content"></a>
-            {{ page.content }}
+            <div class="container-fluid">
+              {{ page.content }}
+            </div>
           {% endblock %}
         </section>
 
