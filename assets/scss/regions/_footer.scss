@@ -14,7 +14,10 @@
   &--logo {
     display: block;
     width: 45px;
-    margin: 10px 0;
+    margin: 10px auto;
+    @media screen and (min-width: $screen-sm) {
+      margin: 10px 0;
+    }
   }
 
   // Footer content
