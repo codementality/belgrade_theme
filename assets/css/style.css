@@ -5858,14 +5858,20 @@ body {
 .glyph-facebook:before {
   content: "\f105"; }
 
-.glyph-plus:before, .product-img--thumb:hover:before {
+.glyph-look:before {
   content: "\f106"; }
 
-.glyph-twitter:before {
+.glyph-plus:before, .product-img--thumb:hover:before {
   content: "\f107"; }
 
-.glyph-youtube:before {
+.glyph-refresh:before {
   content: "\f108"; }
+
+.glyph-twitter:before {
+  content: "\f109"; }
+
+.glyph-youtube:before {
+  content: "\f10a"; }
 
 /**
  * Alert styling.
