@@ -45,7 +45,7 @@
     .field--name-price{
       font-weight: bold;
     }
-    .attribute-widgets{
+    .attribute-widgets {
       // Override panel styles to match designs
       .product--rendered-attribute,
       .panel-title,
@@ -79,9 +79,11 @@
           }
         }
       }
-      // selected and active variations
-      .form-radio:checked  ~ label.option {
-        border: 2px solid $brand-primary;
+      .product--rendered-attribute {
+        // selected and active variations
+        .form-radio:checked  ~ label.option {
+          border: 2px solid $brand-primary;
+        }
       }
     }
     // Select

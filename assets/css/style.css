@@ -7583,7 +7583,7 @@ body.navbar-is-fixed-top.toolbar-tray-open .cart-offcanvas {
     .commerce-product--full .attribute-widgets .product--rendered-attribute .control-label:before, .commerce-product--full .attribute-widgets .product--rendered-attribute .control-label:after {
       display: none; }
 
-.commerce-product--full .attribute-widgets .form-radio:checked ~ label.option {
+.commerce-product--full .attribute-widgets .product--rendered-attribute .form-radio:checked ~ label.option {
   border: 2px solid #41449f; }
 
 .commerce-product--full .form-type-select label {
