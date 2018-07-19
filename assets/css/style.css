@@ -7335,6 +7335,9 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
 .cart-block--offcanvas-contents__links a {
   width: 100%; }
 
+.cart-block--offcanvas-contents__links {
+  margin-bottom: 1em; }
+
 body.navbar-is-static-top .cart-offcanvas {
   padding-top: 0; }
 
