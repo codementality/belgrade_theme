@@ -5533,7 +5533,7 @@ button.close {
 .invisible {
   visibility: hidden; }
 
-.text-hide, .region-navigation a[data-drupal-link-system-path="<front>"] {
+.text-hide, .region-navigation .menu a[data-drupal-link-system-path="<front>"] {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -7091,18 +7091,18 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
 
 .region-navigation {
   text-align: center; }
-  .region-navigation a[data-drupal-link-system-path="<front>"] {
+  .region-navigation .menu .menu__item {
+    width: 100%; }
+  .region-navigation .menu .menu__link {
+    color: white;
+    padding: 10px 15px;
+    font-size: 27px; }
+  .region-navigation .menu a[data-drupal-link-system-path="<front>"] {
     width: 270px;
     height: 42px;
     margin: 70px auto;
     padding: 0;
     background: url("../../logo-inverted.svg") no-repeat center; }
-  .region-navigation .menu-main__item {
-    width: 100%; }
-  .region-navigation .menu-main__link {
-    color: white;
-    padding: 10px 15px;
-    font-size: 27px; }
   @media screen and (min-width: 768px) {
     .region-navigation {
       padding-right: 30px;
