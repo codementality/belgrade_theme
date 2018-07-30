@@ -7594,7 +7594,7 @@ body.navbar-is-fixed-top.toolbar-tray-open .cart-offcanvas {
   text-transform: uppercase; }
 
 .commerce-product--full .select-wrapper {
-  width: 90px; }
+  width: auto; }
 
 .commerce-product--full .form-control {
   border-color: #41449f; }
