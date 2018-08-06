@@ -7272,6 +7272,9 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
   font-weight: 300;
   max-width: 560px; }
 
+.path-checkout .breadcrumb {
+  display: none; }
+
 .view-commerce-cart-form .views-field-purchased-entity > div {
   display: -webkit-box;
   display: -webkit-flex;
