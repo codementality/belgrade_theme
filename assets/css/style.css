@@ -7203,8 +7203,7 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
 .path-frontpage .footer {
   margin-top: 0; }
 
-.path-user:not(.logged-in) .page-header,
-.path-user:not(.logged-in) .tabs--primary {
+.path-user:not(.logged-in) .page-header {
   display: none; }
 
 .auth-user-form {
