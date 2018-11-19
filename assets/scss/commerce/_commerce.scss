@@ -11,3 +11,9 @@
 .path-checkout .breadcrumb {
   display: none;
 }
+
+.form-wrapper__returning-customer {
+  a {
+    @extend .btn, .btn-link
+  }
+}
