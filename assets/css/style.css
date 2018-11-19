@@ -7399,6 +7399,9 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
 .path-checkout .breadcrumb {
   display: none; }
 
+.path-cart .form-actions {
+  text-align: right; }
+
 .view-commerce-cart-form .views-field-purchased-entity > div {
   display: -webkit-box;
   display: -webkit-flex;

@@ -25,4 +25,8 @@
   [id="edit-checkout"] {
     @extend .btn-primary
   }
+
+  .form-actions {
+    text-align: right;
+  }
 }

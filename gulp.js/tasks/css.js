@@ -34,8 +34,7 @@ gulp.task('css:devBrowserSync', function () {
     }))
     .pipe(sass(sassConfig))
     .pipe(autoprefixer(prefixSettings))
-    .pipe(gulp.dest(cssDest))
-    .pipe(browserSync.stream({match: '**/*.css'}));
+    .pipe(gulp.dest(cssDest));
 });
 
 
