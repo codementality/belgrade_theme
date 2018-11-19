@@ -17,3 +17,12 @@
     @extend .btn, .btn-link
   }
 }
+
+.path-cart {
+  [id="edit-submit"] {
+    @extend .btn-default
+  }
+  [id="edit-checkout"] {
+    @extend .btn-primary
+  }
+}

@@ -2821,53 +2821,67 @@ fieldset[disabled] .cart-block--offcanvas-contents__links a,
 .cart-block--offcanvas-contents__links fieldset[disabled] a {
   pointer-events: none; }
 
-.btn-default {
+.btn-default, .path-cart [id="edit-submit"] {
   color: #41449f;
   background-color: #fff;
   border-color: #41449f; }
-  .btn-default:focus, .btn-default.focus {
+  .btn-default:focus, .path-cart :focus[id="edit-submit"], .btn-default.focus, .path-cart .focus[id="edit-submit"] {
     color: #fff;
     background-color: #41449f;
     border-color: #41449f; }
-  .btn-default:hover {
+  .btn-default:hover, .path-cart :hover[id="edit-submit"] {
     color: #fff;
     background-color: #41449f;
     border-color: #41449f; }
-  .btn-default:active, .btn-default.active,
-  .open > .btn-default.dropdown-toggle {
+  .btn-default:active, .path-cart :active[id="edit-submit"], .btn-default.active, .path-cart .active[id="edit-submit"],
+  .open > .btn-default.dropdown-toggle,
+  .path-cart .open > .dropdown-toggle[id="edit-submit"] {
     background-image: none; }
-  .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus,
+  .btn-default.disabled:hover, .path-cart .disabled:hover[id="edit-submit"], .btn-default.disabled:focus, .path-cart .disabled:focus[id="edit-submit"], .btn-default.disabled.focus, .path-cart .disabled.focus[id="edit-submit"], .btn-default[disabled]:hover, .path-cart [disabled]:hover[id="edit-submit"], .btn-default[disabled]:focus, .path-cart [disabled]:focus[id="edit-submit"], .btn-default[disabled].focus, .path-cart [disabled].focus[id="edit-submit"],
   fieldset[disabled] .btn-default:hover,
+  fieldset[disabled] .path-cart :hover[id="edit-submit"],
+  .path-cart fieldset[disabled] :hover[id="edit-submit"],
   fieldset[disabled] .btn-default:focus,
-  fieldset[disabled] .btn-default.focus {
+  fieldset[disabled] .path-cart :focus[id="edit-submit"],
+  .path-cart fieldset[disabled] :focus[id="edit-submit"],
+  fieldset[disabled] .btn-default.focus,
+  fieldset[disabled] .path-cart .focus[id="edit-submit"],
+  .path-cart fieldset[disabled] .focus[id="edit-submit"] {
     background-color: #fff;
     border-color: #41449f; }
-  .btn-default .badge {
+  .btn-default .badge, .path-cart [id="edit-submit"] .badge {
     color: #fff;
     background-color: #41449f; }
 
-.btn-primary {
+.btn-primary, .path-cart [id="edit-checkout"] {
   color: #fff;
   background-color: #41449f;
   border-color: #41449f; }
-  .btn-primary:focus, .btn-primary.focus {
+  .btn-primary:focus, .path-cart :focus[id="edit-checkout"], .btn-primary.focus, .path-cart .focus[id="edit-checkout"] {
     color: #41449f;
     background-color: #fff;
     border-color: #41449f; }
-  .btn-primary:hover {
+  .btn-primary:hover, .path-cart :hover[id="edit-checkout"] {
     color: #41449f;
     background-color: #fff;
     border-color: #41449f; }
-  .btn-primary:active, .btn-primary.active,
-  .open > .btn-primary.dropdown-toggle {
+  .btn-primary:active, .path-cart :active[id="edit-checkout"], .btn-primary.active, .path-cart .active[id="edit-checkout"],
+  .open > .btn-primary.dropdown-toggle,
+  .path-cart .open > .dropdown-toggle[id="edit-checkout"] {
     background-image: none; }
-  .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus,
+  .btn-primary.disabled:hover, .path-cart .disabled:hover[id="edit-checkout"], .btn-primary.disabled:focus, .path-cart .disabled:focus[id="edit-checkout"], .btn-primary.disabled.focus, .path-cart .disabled.focus[id="edit-checkout"], .btn-primary[disabled]:hover, .path-cart [disabled]:hover[id="edit-checkout"], .btn-primary[disabled]:focus, .path-cart [disabled]:focus[id="edit-checkout"], .btn-primary[disabled].focus, .path-cart [disabled].focus[id="edit-checkout"],
   fieldset[disabled] .btn-primary:hover,
+  fieldset[disabled] .path-cart :hover[id="edit-checkout"],
+  .path-cart fieldset[disabled] :hover[id="edit-checkout"],
   fieldset[disabled] .btn-primary:focus,
-  fieldset[disabled] .btn-primary.focus {
+  fieldset[disabled] .path-cart :focus[id="edit-checkout"],
+  .path-cart fieldset[disabled] :focus[id="edit-checkout"],
+  fieldset[disabled] .btn-primary.focus,
+  fieldset[disabled] .path-cart .focus[id="edit-checkout"],
+  .path-cart fieldset[disabled] .focus[id="edit-checkout"] {
     background-color: #41449f;
     border-color: #fff; }
-  .btn-primary .badge {
+  .btn-primary .badge, .path-cart [id="edit-checkout"] .badge {
     color: #41449f;
     background-color: #fff; }
 
@@ -6001,28 +6015,35 @@ html.js .ajax-new-content:empty {
 .btn-link:active, .form-wrapper__returning-customer a:active, .btn-link:focus, .form-wrapper__returning-customer a:focus, .btn-link:active:focus, .form-wrapper__returning-customer a:active:focus, .btn-link:hover, .form-wrapper__returning-customer a:hover {
   outline: 0; }
 
-.btn-default {
+.btn-default, .path-cart [id="edit-submit"] {
   color: #41449f;
   background-color: #fff;
   border-color: #41449f; }
-  .btn-default:focus, .btn-default.focus {
+  .btn-default:focus, .path-cart :focus[id="edit-submit"], .btn-default.focus, .path-cart .focus[id="edit-submit"] {
     color: #fff;
     background-color: #41449f;
     border-color: #41449f; }
-  .btn-default:hover {
+  .btn-default:hover, .path-cart :hover[id="edit-submit"] {
     color: #fff;
     background-color: #41449f;
     border-color: #41449f; }
-  .btn-default:active, .btn-default.active,
-  .open > .btn-default.dropdown-toggle {
+  .btn-default:active, .path-cart :active[id="edit-submit"], .btn-default.active, .path-cart .active[id="edit-submit"],
+  .open > .btn-default.dropdown-toggle,
+  .path-cart .open > .dropdown-toggle[id="edit-submit"] {
     background-image: none; }
-  .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus,
+  .btn-default.disabled:hover, .path-cart .disabled:hover[id="edit-submit"], .btn-default.disabled:focus, .path-cart .disabled:focus[id="edit-submit"], .btn-default.disabled.focus, .path-cart .disabled.focus[id="edit-submit"], .btn-default[disabled]:hover, .path-cart [disabled]:hover[id="edit-submit"], .btn-default[disabled]:focus, .path-cart [disabled]:focus[id="edit-submit"], .btn-default[disabled].focus, .path-cart [disabled].focus[id="edit-submit"],
   fieldset[disabled] .btn-default:hover,
+  fieldset[disabled] .path-cart :hover[id="edit-submit"],
+  .path-cart fieldset[disabled] :hover[id="edit-submit"],
   fieldset[disabled] .btn-default:focus,
-  fieldset[disabled] .btn-default.focus {
+  fieldset[disabled] .path-cart :focus[id="edit-submit"],
+  .path-cart fieldset[disabled] :focus[id="edit-submit"],
+  fieldset[disabled] .btn-default.focus,
+  fieldset[disabled] .path-cart .focus[id="edit-submit"],
+  .path-cart fieldset[disabled] .focus[id="edit-submit"] {
     background-color: #fff;
     border-color: #41449f; }
-  .btn-default .badge {
+  .btn-default .badge, .path-cart [id="edit-submit"] .badge {
     color: #fff;
     background-color: #41449f; }
 
