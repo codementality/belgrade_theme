@@ -14,9 +14,9 @@
 #}
 {% extends "form--user-form.html.twig" %}
 {% block form_header %}
-  {{ 'Login'|t }}
+  {{ 'Log in'|t }}
 {% endblock %}
 {% block form_footer %}
-  <h3>{{('Not a member yet?'|t)}}</h3>
-  <a class="btn btn-white" href="{{ path('user.register') }}">{{ 'Signup'|t }}</a>
+  <h3>{{ ('Not a member yet?'|t) }}</h3>
+  <a class="btn btn-white" href="{{ path('user.register') }}">{{ 'Sign up'|t }}</a>
 {% endblock %}

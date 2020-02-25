@@ -14,10 +14,10 @@
 #}
 {% extends "form--user-form.html.twig" %}
 {% block form_header %}
-  {{ 'Forgot your password'|t }}
+  {{ 'Forgot your password?'|t }}
 {% endblock %}
 {% block form_footer %}
-  <h3>{{('Back to:'|t)}}</h3>
+  <h3>{{ ('Back to:'|t) }}</h3>
   <a class="btn btn-primary" href="{{ path('user.login') }}">{{ 'Login'|t }}</a>
   <a class="btn btn-primary"  href="{{ path('user.register') }}">{{ 'Register'|t }}</a>
 {% endblock %}
