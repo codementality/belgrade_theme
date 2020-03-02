@@ -5,8 +5,12 @@
   .region-header{
     background-color: $violet-medium;
   }
-  .menu-catalog__link{
+  .menu-catalog{
     color: #fff;
+    .dropdown-toggle,
+    > .menu__item > .menu__link {
+      color: inherit;
+    }
   }
   .footer{
     margin-top: 0;

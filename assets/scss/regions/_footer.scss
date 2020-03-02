@@ -60,7 +60,7 @@
   // Navigation
   .menu{
     // General menu elements
-    a {
+    > li > a {
       font-size: 18px;
       color: $footer-link-color;
     }

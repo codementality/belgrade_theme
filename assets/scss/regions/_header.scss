@@ -24,7 +24,8 @@
     display: none;
     justify-content: space-between;
     width: 100%;
-    &__link {
+    .dropdown-toggle,
+    > .menu__item > .menu__link {
       color: $gray-dark;
       text-transform: uppercase;
       white-space: nowrap;

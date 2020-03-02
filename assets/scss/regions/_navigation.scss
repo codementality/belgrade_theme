@@ -10,10 +10,23 @@
     .menu__item{
       width: 100%;
     }
+    .dropdown-toggle,
     .menu__link{
       color: white;
       padding: $main-menu-link-padding;
       font-size: $main-menu-font-size;
+    }
+    .dropdown-menu{
+      left: 50%;
+      transform: translateX(-50%);
+      .menu__link{
+        color: $brand-primary;
+        font-size: $font-size-base;
+      }
+      @media screen and (min-width: $screen-sm) {
+        left: 0;
+        transform: none;
+      }
     }
     // home link
     a[data-drupal-link-system-path="<front>"]{
