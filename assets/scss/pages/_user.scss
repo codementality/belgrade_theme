@@ -20,7 +20,7 @@
   }
   >form {
     padding: 50px 20px 80px;
-    background-color: $violet-light;
+    background-color: $brand-primary-100;
     .form-control {
       height: $user-form-input-height;
     }
@@ -56,7 +56,7 @@
 .form-header {
   margin-bottom: 30px;
   @extend %headings-line;
-} 
+}
 
 // User login form
 .user-login-form {
@@ -73,7 +73,7 @@
   float: right;
   margin-bottom: 40px;
   font-style: italic;
-} 
+}
 
 // User Register form
 .user-pass,
@@ -81,6 +81,6 @@
   background-color: $brand-primary!important;
   @extend %inverted-color-section;
   +.auth-user-form--footer {
-    background-color: $violet-light;
+    background-color: $brand-primary-100;
   }
 }

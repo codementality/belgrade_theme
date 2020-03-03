@@ -76,9 +76,12 @@
 // @see https://www.drupal.org/node/2274631
 .form-required:after {
   background-image: url(../images/required.svg);
-  background-size: 10px 7px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   content:"";
   display: inline-block;
+  vertical-align: top;
   line-height:1;
   height: 7px;
   width: 10px;

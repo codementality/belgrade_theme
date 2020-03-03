@@ -12,17 +12,17 @@
 
 // Colors
 $violet:        #41449f;
-$violet-hover:  rgba($violet, 80);
-$violet-medium: #babad3;
-$violet-light:  #e9e9f2;
+$violet-300:    #babad3;
+$violet-100:    #e9e9f2;
 $green:         #00746b;
-$green-hover:   rgba($green, 80);
 $red:           #ff4141;
-$red-hover:     rgba($red, 80);
 
 // Brand colors
 $brand-primary:         $violet;
+$brand-primary-300:     $violet-300;
+$brand-primary-100:     $violet-300;
 $brand-primary-o:       rgba($violet, 0.1);
+
 $brand-success:         $green;
 $brand-info:            $violet;
 $brand-warning:         #f0ad4e; // default bootstrap
@@ -105,13 +105,13 @@ $table-condensed-cell-padding:  5px;
 //** Default background color used for all tables.
 $table-bg:                      transparent;
 //** Background color used for `.table-striped`.
-$table-bg-accent:               $violet-light;
+$table-bg-accent:               $brand-primary-100;
 //** Background color used for `.table-hover`.
-$table-bg-hover:                $violet-light;
+$table-bg-hover:                $brand-primary-100;
 $table-bg-active:               $table-bg-hover;
 
 //** Border color for table and cell borders.
-$table-border-color:            $violet;
+$table-border-color:            $brand-primary;
 
 //== Panels
 //
@@ -200,7 +200,7 @@ $btn-border-colored:                false;
 //** Text color for `<input>`s
 $input-color:                    $brand-primary;
 //** `<input>` border color
-$input-border:                   $violet-light;
+$input-border:                   $brand-primary-100;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -226,16 +226,16 @@ $label-disabled-color:            $gray-light;
 
 //** Radio Buttons
 $radio-fill-color:                $brand-primary;
-$radio-empty-color:               $violet-light;
+$radio-empty-color:               $brand-primary-100;
 $radio-border:                    2px solid $radio-fill-color;
 $radio-size:                      $default-custom-element-size;
-$radio-disabled-color:            $violet-medium;
+$radio-disabled-color:            $brand-primary-300;
 
 //** Checkboxes
 $checkbox-size:                   $default-custom-element-size;
 $checkbox-fill-color:             $brand-primary;
-$checkbox-empty-border:           $violet-medium;
-$checkbox-disabled-fill-color:    $violet-medium;
+$checkbox-empty-border:           $brand-primary-300;
+$checkbox-disabled-fill-color:    $brand-primary-300;
 
 //== User login, register and forgot password forms
 //
@@ -253,9 +253,9 @@ $alert-success-bg:            $green;
 $alert-success-text:          white;
 $alert-success-border:        $green;
 
-$alert-info-bg:               $violet;
+$alert-info-bg:               $brand-primary;
 $alert-info-text:             white;
-$alert-info-border:           $violet;
+$alert-info-border:           $brand-primary;
 
 $alert-warning-bg:            $state-warning-bg;
 $alert-warning-text:          white;

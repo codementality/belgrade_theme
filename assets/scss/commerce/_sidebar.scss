@@ -7,12 +7,12 @@
   }
   .checkout-pane-order-summary{
     padding: 40px;
-    background-color: $violet-light;
+    background-color: $brand-primary-100;
   }
   //tables
   .table > tbody > tr > td{
     border-top: 0;
-    border-bottom: 1px solid $violet-medium;
+    border-bottom: 1px solid $brand-primary-300;
   }
   .checkout-pane-coupon-redemption{
     #sidebar-coupon_redemption-form-ajax-wrapper{
