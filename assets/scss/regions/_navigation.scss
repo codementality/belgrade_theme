@@ -35,7 +35,8 @@
       height: 42px;
       margin: 70px auto;
       padding: 0;
-      background: url("../../logo-inverted.svg") no-repeat center;
+      background: url("../../logo.svg") no-repeat center;
+      filter: invert(1);
     }
   }
 

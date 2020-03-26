@@ -4,6 +4,9 @@
 .path-frontpage{
   .region-header{
     background-color: $brand-primary-300;
+    .logo {
+      filter: invert(1);
+    }
   }
   .menu-catalog{
     color: #fff;

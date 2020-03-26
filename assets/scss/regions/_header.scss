@@ -9,7 +9,9 @@
     display: flex;
     flex-shrink: 0;
     margin-right: auto;
-    max-height: 42px;
+    img {
+      width: 100%;
+    }
   }
 
   > .container{

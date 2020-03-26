@@ -28,6 +28,9 @@
   [type="checkbox"]:checked + label{
     font-weight: bold;
   }
+  &:last-child {
+    margin-bottom: 20px;
+  }
 }
 
 .facets-widget-checkbox{

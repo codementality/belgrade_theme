@@ -29,15 +29,6 @@ function belgrade_theme_suggestions_form_alter(&$suggestions, $variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for block templates.
- */
-function belgrade_preprocess_block(&$variables) {
-  if ($variables['base_plugin_id'] == 'system_branding_block' && !empty($variables['is_front'])) {
-    $variables['site_logo'] =  base_path() . drupal_get_path('theme','belgrade') . '/logo-inverted.svg';
-  }
-}
-
-/**
  * Implements hook_preprocess_HOOK() for form element templates.
  */
 function belgrade_preprocess_form_element(&$variables) {
