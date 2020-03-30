@@ -91,6 +91,9 @@
     border-color: white;
     background-color: transparent;
     color: white;
+    &:focus {
+      border-color: white;
+    }
   }
   .select-wrapper::after {
     color: white;

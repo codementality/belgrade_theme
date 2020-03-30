@@ -26,3 +26,4 @@ libraries-override:
 libraries:
   - 'belgrade/fonts'
   - 'belgrade/theme'
+  - 'belgrade/color'

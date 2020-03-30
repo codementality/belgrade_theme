@@ -76,9 +76,9 @@
 }
 
 // User Register form
-.user-pass,
-.user-register-form {
-  background-color: $brand-primary!important;
+#user-pass,
+#user-register-form {
+  background-color: $brand-primary;
   @extend %inverted-color-section;
   +.auth-user-form--footer {
     background-color: $brand-primary-100;
