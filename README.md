@@ -9,7 +9,7 @@
 
 ## INTRODUCTION
 
-Belgrade is a Bootstrap sub-theme made for Drupal Commerce 2.0.
+Belgrade is a Bootstrap based theme made for Drupal Commerce 2.0.
 
 The Belgrade theme was designed and built around functionality provided by the Commerce Demo module. As a result, it has styling that targets specific components that the theme itself is unable to provide.
 
