@@ -21,7 +21,7 @@ body {
 
 // Color swatch
 .color_field__swatch {
-  display: block;
+  @extend .d-block;
 }
 
 // Dropdowns
@@ -41,7 +41,7 @@ body {
 
   // Display dropdowns on hover
   &:hover > .dropdown-toggle + .dropdown-menu {
-    display: block;
+    @extend .d-block;
   }
 }
 
@@ -60,7 +60,7 @@ $accordion-button-fs: $font-size-md;
 
   .accordion {
     background-color: $nested-accordion-bg;
-    margin-bottom: 1.5rem !important;
+    @extend .mb-4;
 
     .fieldset-legend.accordion-button {
       font-size: 1rem;
@@ -80,7 +80,7 @@ $accordion-button-fs: $font-size-md;
 
 // Tables
 td > .form-item:only-child {
-  margin-bottom: 0 !important;
+  @extend .mb-0;
 }
 
 // Contextual links.
@@ -88,14 +88,4 @@ td > .form-item:only-child {
   color: initial!important;
   text-transform: initial!important;
   font-weight: normal!important;
-}
-
-// Temporary fix for the offcanvas component toggle button.
-// https://github.com/twbs/bootstrap/issues/33457
-.navigation-toggle {
-  > span,
-  > svg {
-    position: relative;
-    z-index: -1;
-  }
 }

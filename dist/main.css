@@ -1980,7 +1980,11 @@ progress {
   overflow: hidden;
 }
 
-.form-control[type="file"]:not(:disabled):not([readonly]) {
+.form-control[type="file"]:not(:disabled):not(:-moz-read-only) {
+  cursor: pointer;
+}
+
+.form-control[type="file"]:not(:disabled):not(:read-only) {
   cursor: pointer;
 }
 
@@ -2011,7 +2015,12 @@ progress {
   opacity: 1;
 }
 
-.form-control:disabled, .form-control[readonly] {
+.form-control:-moz-read-only {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+.form-control:disabled, .form-control:read-only {
   background-color: #e9ecef;
   opacity: 1;
 }
@@ -2038,7 +2047,11 @@ progress {
   }
 }
 
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+.form-control:hover:not(:disabled):not(:-moz-read-only)::file-selector-button {
+  background-color: #dde0e3;
+}
+
+.form-control:hover:not(:disabled):not(:read-only)::file-selector-button {
   background-color: #dde0e3;
 }
 
@@ -2066,7 +2079,7 @@ progress {
   }
 }
 
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+.form-control:hover:not(:disabled):not(:read-only)::-webkit-file-upload-button {
   background-color: #dde0e3;
 }
 
@@ -2147,7 +2160,11 @@ textarea.form-control-lg {
   padding: 0.5rem;
 }
 
-.form-control-color:not(:disabled):not([readonly]) {
+.form-control-color:not(:disabled):not(:-moz-read-only) {
+  cursor: pointer;
+}
+
+.form-control-color:not(:disabled):not(:read-only) {
   cursor: pointer;
 }
 
@@ -2680,6 +2697,9 @@ textarea.form-control-lg {
 
 .was-validated .form-select:valid, .form-select.is-valid {
   border-color: #00746b;
+}
+
+.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"] {
   padding-right: calc(0.75em + 2.5rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2300746b' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 1.75rem;
@@ -2767,6 +2787,9 @@ textarea.form-control-lg {
 
 .was-validated .form-select:invalid, .form-select.is-invalid {
   border-color: #ff4141;
+}
+
+.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"] {
   padding-right: calc(0.75em + 2.5rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ff4141'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ff4141' stroke='none'/%3e%3c/svg%3e");
   background-position: right 0.75rem center, center right 1.75rem;
@@ -3702,7 +3725,6 @@ fieldset:disabled .button {
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
   z-index: 1000;
   display: none;
   min-width: 10rem;
@@ -3719,6 +3741,7 @@ fieldset:disabled .button {
 }
 
 .dropdown-menu[data-bs-popper] {
+  top: 100%;
   left: 0;
   margin-top: 0.125rem;
 }
@@ -3848,13 +3871,10 @@ fieldset:disabled .button {
   margin-left: 0;
 }
 
-.dropend .dropdown-menu {
+.dropend .dropdown-menu[data-bs-popper] {
   top: 0;
   right: auto;
   left: 100%;
-}
-
-.dropend .dropdown-menu[data-bs-popper] {
   margin-top: 0;
   margin-left: 0.125rem;
 }
@@ -3878,13 +3898,10 @@ fieldset:disabled .button {
   vertical-align: 0;
 }
 
-.dropstart .dropdown-menu {
+.dropstart .dropdown-menu[data-bs-popper] {
   top: 0;
   right: 100%;
   left: auto;
-}
-
-.dropstart .dropdown-menu[data-bs-popper] {
   margin-top: 0;
   margin-right: 0.125rem;
 }
@@ -4243,6 +4260,10 @@ fieldset:disabled .button {
   .nav-link {
     transition: none;
   }
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: var(--beo-primary-hover);
 }
 
 .nav-link.disabled {
@@ -4934,7 +4955,6 @@ fieldset:disabled .button {
 }
 
 .accordion-item {
-  margin-bottom: -1px;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
@@ -4949,8 +4969,11 @@ fieldset:disabled .button {
   border-top-right-radius: calc(0.25rem - 1px);
 }
 
+.accordion-item:not(:first-of-type) {
+  border-top: 0;
+}
+
 .accordion-item:last-of-type {
-  margin-bottom: 0;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
@@ -5951,14 +5974,6 @@ fieldset:disabled .button {
   margin: 0.25rem;
 }
 
-.modal-scrollbar-measure {
-  position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll;
-}
-
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
@@ -6652,7 +6667,7 @@ fieldset:disabled .button {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  vertical-align: text-bottom;
+  vertical-align: -0.125em;
   border: 0.25em solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;
@@ -6690,7 +6705,7 @@ fieldset:disabled .button {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  vertical-align: text-bottom;
+  vertical-align: -0.125em;
   background-color: currentColor;
   border-radius: 50%;
   opacity: 0;
@@ -6714,7 +6729,7 @@ fieldset:disabled .button {
 .offcanvas {
   position: fixed;
   bottom: 0;
-  z-index: 1040;
+  z-index: 1050;
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -6733,6 +6748,7 @@ fieldset:disabled .button {
 
 .offcanvas-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 2rem 2rem;
 }
@@ -6769,6 +6785,16 @@ fieldset:disabled .button {
   transform: translateX(100%);
 }
 
+.offcanvas-top {
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 30vh;
+  max-height: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transform: translateY(-100%);
+}
+
 .offcanvas-bottom {
   right: 0;
   left: 0;
@@ -6780,17 +6806,6 @@ fieldset:disabled .button {
 
 .offcanvas.show {
   transform: none;
-}
-
-.offcanvas-backdrop::before {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1039;
-  width: 100vw;
-  height: 100vh;
-  content: "";
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .z--1 {
@@ -7169,7 +7184,7 @@ fieldset:disabled .button {
   display: inline-block !important;
 }
 
-.d-block {
+.d-block, .color_field__swatch, .dropdown:hover > .dropdown-toggle + .dropdown-menu {
   display: block !important;
 }
 
@@ -7817,7 +7832,7 @@ fieldset:disabled .button {
   margin-right: auto !important;
 }
 
-.mb-0 {
+.mb-0, td > .form-item:only-child {
   margin-bottom: 0 !important;
 }
 
@@ -7833,7 +7848,7 @@ fieldset:disabled .button {
   margin-bottom: 1rem !important;
 }
 
-.mb-4 {
+.mb-4, .accordion .accordion {
   margin-bottom: 1.5rem !important;
 }
 
@@ -11318,7 +11333,7 @@ body.toolbar-horizontal.toolbar-tray-open .region-navigation.offcanvas-end {
 
 .region-top-bar {
   height: 3.5rem;
-  z-index: 1041;
+  z-index: 1051;
 }
 
 @media (max-width: 1199.98px) {
@@ -11455,10 +11470,6 @@ body {
   text-transform: uppercase;
 }
 
-.color_field__swatch {
-  display: block;
-}
-
 .dropdown .dropdown-menu .dropdown-toggle:after {
   transform: rotate(270deg);
   margin-left: 0.5rem;
@@ -11467,10 +11478,6 @@ body {
 .dropdown .dropdown-menu .dropdown-menu {
   left: 96%;
   top: 0;
-}
-
-.dropdown:hover > .dropdown-toggle + .dropdown-menu {
-  display: block;
 }
 
 .accordion .fieldset-legend.accordion-button {
@@ -11483,7 +11490,6 @@ body {
 
 .accordion .accordion {
   background-color: #f8f9fa;
-  margin-bottom: 1.5rem !important;
 }
 
 .accordion .accordion .fieldset-legend.accordion-button {
@@ -11499,18 +11505,8 @@ body {
   font-weight: bold;
 }
 
-td > .form-item:only-child {
-  margin-bottom: 0 !important;
-}
-
 .contextual-links a {
   color: initial !important;
   text-transform: initial !important;
   font-weight: normal !important;
-}
-
-.navigation-toggle > span,
-.navigation-toggle > svg {
-  position: relative;
-  z-index: -1;
 }
