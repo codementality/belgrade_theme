@@ -41,7 +41,7 @@
     {{- product.variation_field_images -}}
   </div>
   <div class="product-info d-flex align-items-center justify-content-between">
-    <div class="product-title current-color fw-bold">{{ product.title }}</div>
+    <div class="product-title fw-bold">{{ product.title }}</div>
     <a href="{{ product_url }}" class="stretched-link"></a>
     {{- product|without('title', 'variation_attributes', 'field_images', 'variation_field_images') -}}
   </div>

@@ -3,7 +3,7 @@
  * Belgrade theme commerce cart flyout overrides.
  */
 $cart-flyout-table-spacing: 0.4rem;
-$cart-flyout-zindex: $zindex-modal-backdrop + 1;
+$cart-flyout-zindex: $zindex-modal + 1;
 
 .cart-offcanvas {
   z-index: $cart-flyout-zindex;

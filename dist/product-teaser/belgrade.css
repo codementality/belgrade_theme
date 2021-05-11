@@ -39,6 +39,11 @@
   padding-right: 1rem;
 }
 
+.product:hover .product-title a {
+  color: currentColor;
+}
+
 .product:hover .product-hover {
   opacity: 1;
 }
+

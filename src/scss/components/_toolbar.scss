@@ -3,7 +3,7 @@ $admin-tray-size: 39px;
 
 // Toasts.
 .toolbar-oriented .toolbar-bar {
-  z-index: $zindex-modal;
+  z-index: map-get($z-index, toolbar);
 }
 
 // Navigation (Offcanvas).

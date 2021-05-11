@@ -563,7 +563,7 @@ progress {
 }
 
 .blockquote-footer::before {
-  content: "\2014\A0";
+  content: "\2014\00A0";
 }
 
 .img-fluid {
@@ -6848,6 +6848,10 @@ fieldset:disabled .button {
   z-index: 1070;
 }
 
+.z-toolbar {
+  z-index: 1250;
+}
+
 .img-cover {
   position: absolute;
   width: 100%;
@@ -7044,7 +7048,6 @@ fieldset:disabled .button {
 }
 
 .sticky-top {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1020;
@@ -7052,7 +7055,6 @@ fieldset:disabled .button {
 
 @media (min-width: 576px) {
   .sticky-sm-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7061,7 +7063,6 @@ fieldset:disabled .button {
 
 @media (min-width: 768px) {
   .sticky-md-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7070,7 +7071,6 @@ fieldset:disabled .button {
 
 @media (min-width: 992px) {
   .sticky-lg-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7079,7 +7079,6 @@ fieldset:disabled .button {
 
 @media (min-width: 1200px) {
   .sticky-xl-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7088,7 +7087,6 @@ fieldset:disabled .button {
 
 @media (min-width: 1400px) {
   .sticky-xxl-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -7249,7 +7247,6 @@ fieldset:disabled .button {
 }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -8314,7 +8311,6 @@ fieldset:disabled .button {
 .user-select-all {
   -webkit-user-select: all !important;
      -moz-user-select: all !important;
-      -ms-user-select: all !important;
           user-select: all !important;
 }
 
@@ -11127,7 +11123,7 @@ fieldset.fieldgroup.error .fieldset-legend {
 }
 
 .toolbar-oriented .toolbar-bar {
-  z-index: 1050;
+  z-index: 1250;
 }
 
 body.toolbar-vertical .region-navigation.offcanvas-start,
@@ -11176,7 +11172,7 @@ body.toolbar-horizontal.toolbar-tray-open .region-navigation.offcanvas-end {
  * Belgrade theme commerce cart flyout overrides.
  */
 .cart-offcanvas {
-  z-index: 1041;
+  z-index: 1051;
 }
 
 .cart-block--offcanvas-cart-table .form-control[type="number"] {
@@ -11510,3 +11506,4 @@ body {
   text-transform: initial !important;
   font-weight: normal !important;
 }
+

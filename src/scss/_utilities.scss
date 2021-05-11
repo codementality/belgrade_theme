@@ -13,7 +13,8 @@ $z-index: (
   fixed: $zindex-fixed,
   modal: $zindex-modal,
   popover: $zindex-popover,
-  tooltip: $zindex-tooltip
+  tooltip: $zindex-tooltip,
+  toolbar: 1250
 );
 
 @each $name, $value in $z-index {
