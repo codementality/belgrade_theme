@@ -66,7 +66,7 @@ function belgrade_theme_suggestions_page_alter(array &$suggestions, array $varia
   // * Add view mode theme suggestions based on the vocabulary
   if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical' && $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term')) {
     $term = Term::load($tid);
-    $suggestions[] = 'page__taxonomy__' . $term->getVocabularyId();
+    $suggestions[] = 'page__taxonomy__' . $term->bundle();
   }
 }
 
