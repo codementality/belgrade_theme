@@ -71,23 +71,23 @@ product-teaser.zoom:
 ####
 # Font libraries
 ####
-font.roboto:
+font.ibm_plex_sans:
   license:
     name: OFL web version
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
   css:
     theme:
-      '//fonts.googleapis.com/css?family=Roboto:300,400,400i,700': { type: external, minified: true }
-      dist/fonts/roboto.css: {}
+      '//fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700': { type: external, minified: true }
+      dist/fonts/ibm_plex_sans.css: {}
 
-font.raleway:
+font.lato:
   license:
     name: OFL web version
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
   css:
     theme:
-      '//fonts.googleapis.com/css?family=Raleway:300,400,400i,700': { type: external, minified: true }
-      dist/fonts/raleway.css: {}
+      '//fonts.googleapis.com/css?family=Lato:300,400,400i,700': { type: external, minified: true }
+      dist/fonts/lato.css: {}
 
 font.montserrat:
   license:
@@ -107,11 +107,20 @@ font.open_sans:
       '//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700': { type: external, minified: true }
       dist/fonts/open_sans.css: {}
 
-font.lato:
+font.raleway:
   license:
     name: OFL web version
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
   css:
     theme:
-      '//fonts.googleapis.com/css?family=Lato:300,400,400i,700': { type: external, minified: true }
-      dist/fonts/lato.css: {}
+      '//fonts.googleapis.com/css?family=Raleway:300,400,400i,700': { type: external, minified: true }
+      dist/fonts/raleway.css: {}
+
+font.roboto:
+  license:
+    name: OFL web version
+    url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Roboto:300,400,400i,700': { type: external, minified: true }
+      dist/fonts/roboto.css: {}

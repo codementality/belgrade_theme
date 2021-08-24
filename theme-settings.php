@@ -280,11 +280,12 @@ function belgrade_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#empty_option' => t('None'),
     '#description' => t('A few predefined font libraries delivered from Google.<br/>All fonts are loaded with Regular, Italic and Bold variants.'),
     '#options' => array(
-      'roboto' => 'Roboto',
-      'raleway' => 'Raleway',
+      'ibm_plex_sans' => 'IBM Plex Sans',
+      'lato' => 'Lato',
       'montserrat' => 'Montserrat',
       'open_sans' => 'Open Sans',
-      'lato' => 'Lato'
+      'raleway' => 'Raleway',
+      'roboto' => 'Roboto'
     ),
   );
 
