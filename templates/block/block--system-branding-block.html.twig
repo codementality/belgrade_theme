@@ -18,7 +18,7 @@
   {% if site_logo %}
     <a href="{{ path('<front>') }}" rel="home" class="site-logo text-reset">
       {% if inline_logo %}
-        {{ source(site_logo) }}
+        {{ source(site_logo, ignore_missing = true) }}
       {% else %}
         <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
       {% endif %}

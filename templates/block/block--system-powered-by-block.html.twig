@@ -32,7 +32,7 @@
 
 {% block content %}
   <a class="footer--logo" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-    {{ source(directory ~ '/dist/images/logo-graphic.svg') }}
+    {{ source(directory ~ '/dist/images/logo-graphic.svg', ignore_missing = true) }}
   </a>
   <div>
     {{ parent() }}
