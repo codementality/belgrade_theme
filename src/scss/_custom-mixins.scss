@@ -48,3 +48,62 @@
   overflow: hidden;
   text-indent: 9999px;
 }
+
+ // Cover Object - Mostly usable for images.
+@mixin object-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+// Opacify links - Lower link opacity on hover.
+@mixin opacify-links {
+  a:not(.btn) {
+    transition: $transition-fade;
+    color: currentColor;
+    &:hover {
+      opacity: 0.6;
+      color: currentColor;
+    }
+  }
+}
+
+// Font smoothing.
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// Underline
+@mixin underline {
+  position: relative;
+  &:not(.nav-link) {
+    padding-bottom: $spacer;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: $underline-width;
+    height: $underline-height;
+    left: 50%;
+    bottom: $underline-height;
+    background-color: $underline-bg;
+    margin-left: -$underline-width / 2;
+  }
+
+  &.hover {
+    &:before {
+      transition: $transition-base;
+      transform: scale(0);
+    }
+    &:hover:before {
+      visibility: visible;
+      background-color: currentColor;
+      transform: scale(1);
+    }
+  }
+}

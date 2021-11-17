@@ -36,11 +36,15 @@
       'fieldset-legend',
       required ? 'js-form-required',
       required ? 'form-required',
-      'h5'
+      'border-bottom',
+      'd-block',
+      'py-2',
+      'mb-3',
+      'fs-5'
     ]
   %}
   {#  Always wrap fieldset legends in a <span> for CSS positioning. #}
-  <legend{{ legend.attributes.addClass(['border-bottom', 'py-2', 'mb-3']) }}>
+  <legend{{ legend.attributes }}>
     <span{{ legend_span.attributes.addClass(legend_span_classes) }}>{{ legend.title }}</span>
   </legend>
   <div class="fieldset-wrapper">

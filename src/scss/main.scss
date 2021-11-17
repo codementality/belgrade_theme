@@ -5,6 +5,7 @@
 // Configuration
 @import "global";
 @import "~bootstrap/scss/utilities";
+@import "utilities";
 
 // Bootstrap Layout & components
 @import "~bootstrap/scss/root";
@@ -38,11 +39,9 @@
 @import "~bootstrap/scss/spinners";
 @import "~bootstrap/scss/offcanvas";
 
-// Custom utilities
-@import "utilities";
-
-// Bootstrap Helpers
+// Helpers
 @import "~bootstrap/scss/helpers";
+@import "helpers";
 
 // Bootstrap Utilities
 @import "~bootstrap/scss/utilities/api";

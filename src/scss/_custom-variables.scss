@@ -576,6 +576,37 @@ $required-mark-size: 6px;
 $required-mark-icon: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2216%22%20height%3D%2216%22%3E%3Cpath%20fill%3D%22%23EE0000%22%20%20d%3D%22M0%2C7.562l1.114-3.438c2.565%2C0.906%2C4.43%2C1.688%2C5.59%2C2.35C6.398%2C3.553%2C6.237%2C1.544%2C6.22%2C0.447h3.511%20c-0.05%2C1.597-0.234%2C3.6-0.558%2C6.003c1.664-0.838%2C3.566-1.613%2C5.714-2.325L16%2C7.562c-2.05%2C0.678-4.06%2C1.131-6.028%2C1.356%20c0.984%2C0.856%2C2.372%2C2.381%2C4.166%2C4.575l-2.906%2C2.059c-0.935-1.274-2.041-3.009-3.316-5.206c-1.194%2C2.275-2.244%2C4.013-3.147%2C5.206%20l-2.856-2.059c1.872-2.307%2C3.211-3.832%2C4.017-4.575C3.849%2C8.516%2C1.872%2C8.062%2C0%2C7.562%22/%3E%3C/svg%3E%0A');
 
 // Z-index master list
+$zindex-dropdown:                   1000;
+$zindex-sticky:                     1020;
+$zindex-fixed:                      1030;
+$zindex-offcanvas-backdrop:         1040;
+$zindex-offcanvas:                  1045;
+$zindex-modal-backdrop:             1050;
+$zindex-modal:                      1055;
+$zindex-popover:                    1070;
+$zindex-tooltip:                    1080;
+
+$z-index: (
+  "-1": "-1",
+  1: 1,
+  2: 2,
+  3: 3,
+  dropdown: $zindex-dropdown,
+  sticky: $zindex-sticky,
+  fixed: $zindex-fixed,
+  modal: $zindex-modal,
+  popover: $zindex-popover,
+  tooltip: $zindex-tooltip,
+  toolbar: 1250
+);
+
+
+// Underline
+
+$underline-width:         1.3em;
+$underline-height:        2px;
+$underline-bg:            var(--#{$variable-prefix}primary);
+
 
 // Navs
 

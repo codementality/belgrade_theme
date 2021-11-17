@@ -20,7 +20,7 @@
 
 {% block content %}
   <div class="d-flex align-items-center justify-content-between fw-light">
-    <a class="navigation-toggle me-auto pointer" data-bs-toggle="offcanvas" data-bs-target="#navigationRegion" aria-controls="navigationRegion">
+    <a class="navigation-toggle me-auto cursor-pointer" data-bs-toggle="offcanvas" data-bs-target="#navigationRegion" aria-controls="navigationRegion">
       {{ svg.getIcon('list', 32, 32) }}
       {% if navigation_toggle_text %}
         <span>{{- navigation_toggle_text -}}</span>

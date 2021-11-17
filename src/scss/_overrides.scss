@@ -2,29 +2,16 @@
 // Overrides
 // ----------------------------
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .main-container {
   min-height: 500px;
 }
 
+// Button overrides.
 .btn {
   text-transform: uppercase;
 }
 
-.button {
-  @extend .btn;
-}
-
-// Color swatch
-.color_field__swatch {
-  @extend .d-block;
-}
-
-// Dropdowns
+// Dropdown overrides.
 .dropdown {
   // Nested menus
   .dropdown-menu {
@@ -45,7 +32,7 @@ body {
   }
 }
 
-// Accordions
+// Accordion overrides.
 $nested-accordion-bg: $light;
 $accordion-button-fs: $font-size-md;
 
@@ -68,24 +55,30 @@ $accordion-button-fs: $font-size-md;
   }
 }
 
+// Toast overrides.
 .toast-body a {
   font-weight: bold;
 }
 
-// Alert links
+// Alert overrides.
 .alert a {
   color: inherit;
   font-weight: bold;
 }
 
-// Tables
+// Table overrides.
 td > .form-item:only-child {
   @extend .mb-0;
 }
 
-// Contextual links.
+// Contextual links overrides.
 .contextual-links a {
   color: initial!important;
   text-transform: initial!important;
   font-weight: normal!important;
+}
+
+// Card divider overrides.
+.credit-card-form__divider {
+  margin: 2.4rem 0.5rem 0 0.5rem;
 }

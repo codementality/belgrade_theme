@@ -55,7 +55,6 @@
     order: -1;
     margin-right: 0;
     width: 100%;
-    @extend .btn-sm;
-    @extend .btn-secondary;
+    @extend .btn-sm, .btn-secondary;
   }
 }

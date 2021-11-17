@@ -14,9 +14,11 @@
   }
 
   > .form-item {
+    .fieldset-legend,
     > label {
       font-weight: normal;
-      @extend .border-bottom, .py-2, .mb-3;
+      line-height: 1.2;
+      @extend .h5, .border-bottom, .py-2, .mb-3;
     }
   }
 }
@@ -32,6 +34,7 @@
   label.option {
     display: inline-block;
     .color_field__swatch {
+      @extend .d-block, .cursor-pointer;
       border: 1px solid $light;
     }
   }
