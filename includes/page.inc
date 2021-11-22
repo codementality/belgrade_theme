@@ -75,17 +75,15 @@ function belgrade_theme_suggestions_page_alter(array &$suggestions, array $varia
  * Implements hook_page_attachments_alter().
  */
 function belgrade_page_attachments_alter(array &$page) {
-  $activeThemeName = \Drupal::theme()->getActiveTheme()->getName();
-
   // Font libraries attachments
   $font = theme_get_setting('font_set');
   if ($font) {
-    $page['#attached']['library'][] = $activeThemeName . '/font.' . $font;
+    $page['#attached']['library'][] = 'belgrade/font.' . $font;
   }
 
   // Belgrade icons.
   if (theme_get_setting('belgrade_icons') === 1) {
-    $page['#attached']['library'][] = $activeThemeName . '/icons';
+    $page['#attached']['library'][] = 'belgrade/icons';
   }
 
   // Add Breakpoints to drupalSettings
