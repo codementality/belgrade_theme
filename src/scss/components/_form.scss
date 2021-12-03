@@ -20,6 +20,14 @@
   }
 }
 
+.form-item {
+  margin-bottom: $form-item-margin-bottom;
+}
+
+.fieldset-legend:not(.accordion-button) {
+  margin-bottom: $form-fieldset-legend-margin-bottom;
+}
+
 // Errors
 .error {
   &.form-control {
@@ -105,26 +113,3 @@ fieldset.fieldgroup.error .fieldset-legend {
   }
 }
 
-// Inline forms
-@include media-breakpoint-up("lg") {
-  .form-inline {
-    display: flex;
-    flex-wrap: wrap;
-
-    .form-label {
-      margin: 0 0.5rem 0 0;
-      white-space: nowrap;
-      font-weight: bold;
-    }
-
-    .form-item,
-    .form-actions {
-      display: flex;
-      align-items: center;
-    }
-
-    .form-item {
-      margin: 0.5rem 1.5rem 0.5rem 0 !important;
-    }
-  }
-}

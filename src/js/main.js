@@ -4,7 +4,7 @@
  *
  */
 
-(function ($, Drupal) {
+(function ($, Drupal, drupalSettings) {
 
   'use strict';
 
@@ -40,5 +40,21 @@
     }
   };
 
+  // Collapse certain accordions on mobile
+  Drupal.behaviors.collapseAccordionMob = {
+    attach: function () {
+      const breakPoint = drupalSettings.responsive.breakpoints["belgrade.sm-max"]
+      var x = window.matchMedia(breakPoint)
 
-})(jQuery, Drupal);
+      if (x.matches) { // If media query matches collapse the bef
+        var befAccordions = document.querySelectorAll('.bef-exposed-form .collapse');
+        if (befAccordions.length) {
+          [].forEach.call(befAccordions, function(bef) {
+            $(bef).collapse('hide')
+          });
+        }
+      }
+    }
+  };
+
+})(jQuery, Drupal, drupalSettings);

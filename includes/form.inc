@@ -269,11 +269,14 @@ function belgrade_theme_suggestions_container_alter(array &$suggestions, array $
 /**
  * Implements hook_theme_suggestions_fieldset().
  */
-function belgrade_theme_suggestions_fieldset_alter(array &$suggestions) {
-
+function belgrade_theme_suggestions_fieldset_alter(array &$suggestions, &$variables, $hook) {
   $current_path = \Drupal::service('path.current')->getPath();
   $patterns = "/checkout/*\n/user\n/user/login\n/user/password";
   $match = \Drupal::service('path.matcher')->matchPath($current_path, $patterns);
+
+  if (in_array($variables['element']['#theme'], array('bef_radios','bef_checkboxes'))) {
+    $suggestions[] = 'fieldset__accordion';
+  }
 
   if (theme_get_setting('fieldset_accordion') && $match) {
     $suggestions[] = 'fieldset__accordion';

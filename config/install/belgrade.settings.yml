@@ -41,7 +41,7 @@ region_class_header: 'py-5 mt-lg-4'
 region_container_header: 'container-xl'
 
 # Sidebar First
-region_class_sidebar_first: 'col-lg-3 me-lg-4 order-lg-first'
+region_class_sidebar_first: 'col-lg-3 me-lg-4 order-first'
 region_container_sidebar_first: ''
 
 # Content

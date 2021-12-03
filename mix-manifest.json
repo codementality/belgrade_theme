@@ -10,6 +10,7 @@
     "/dist/color.css": "/dist/color.css",
     "/dist/main.css": "/dist/main.css",
     "/dist/components/icons.css": "/dist/components/icons.css",
+    "/dist/components/better_exposed_filters.css": "/dist/components/better_exposed_filters.css",
     "/dist/commerce/product.images.css": "/dist/commerce/product.images.css",
     "/dist/commerce/commerce_wishlist.css": "/dist/commerce/commerce_wishlist.css"
 }

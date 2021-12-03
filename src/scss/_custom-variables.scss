@@ -526,6 +526,7 @@ $btn-transition:              color .15s ease-in-out, background-color .15s ease
 
 
 // Forms
+$form-item-margin-bottom:               $spacer;
 
 $form-text-margin-top:                  0;
 $form-text-font-size:                   0.8125rem;
@@ -565,8 +566,10 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow;
 
-$form-check-input-checked-bg-color:       var(--#{$variable-prefix}primary);
-$form-check-input-checked-border-color:   var(--#{$variable-prefix}primary);
+$form-check-input-checked-bg-color:     var(--#{$variable-prefix}primary);
+$form-check-input-checked-border-color: var(--#{$variable-prefix}primary);
+
+$form-fieldset-legend-margin-bottom:    $spacer;
 
 // Form validation
 

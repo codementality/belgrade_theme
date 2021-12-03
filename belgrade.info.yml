@@ -44,6 +44,10 @@ libraries-override:
     css:
       layout:
         css/commerce_wishlist.user.css: dist/commerce/commerce_wishlist.css
+  better_exposed_filters/general:
+    css:
+      theme:
+        css/better_exposed_filters.css: dist/components/better_exposed_filters.css
 
   commerce_order/address_book: false
   commerce_product/rendered-attributes: false

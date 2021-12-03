@@ -70,7 +70,7 @@ function belgrade_form_system_theme_settings_alter(&$form, FormStateInterface $f
   $form['settings']['general']['fieldset_accordion'] = array(
     '#type' => 'checkbox',
     '#title' => t('Collapsible Fieldsets'),
-    '#description' => t('Display Fieldsets as collapsible accordions.'),
+    '#description' => t('Display Fieldsets as collapsible accordions on checkout and user form pages.'),
     '#default_value' => theme_get_setting('fieldset_accordion')
   );
 
