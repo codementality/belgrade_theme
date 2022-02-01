@@ -274,7 +274,7 @@ function belgrade_theme_suggestions_fieldset_alter(array &$suggestions, &$variab
   $patterns = "/checkout/*\n/user\n/user/login\n/user/password";
   $match = \Drupal::service('path.matcher')->matchPath($current_path, $patterns);
 
-  if (in_array($variables['element']['#theme'], array('bef_radios','bef_checkboxes'))) {
+  if (isset($variables['element']['#theme']) && in_array($variables['element']['#theme'], array('bef_radios','bef_checkboxes'))) {
     $suggestions[] = 'fieldset__accordion';
   }
 
