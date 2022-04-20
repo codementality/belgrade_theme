@@ -32,17 +32,44 @@ color.preview:
   dependencies:
     - color/drupal.color
 
-####
+local-tasks.fixed:
+  css:
+    component:
+      dist/components/local-tasks.fixed.css: {}
+select2.theme:
+  css:
+    component:
+      dist/components/select2--belgrade-theme.css: {}
+
+# Layout Builder
+layout-builder.theme:
+  css:
+    component:
+      dist/components/layout-builder.theme.css: {}
+cklb:
+  css:
+    component:
+      dist/components/cklb.css: {}
+cklb.cta:
+  css:
+    component:
+      dist/components/cklb.cta.css: {}
+cklb.hero:
+  css:
+    component:
+      dist/components/cklb.hero.css: {}
+cklb.slideshow:
+  css:
+    component:
+      dist/components/cklb.slideshow.css: {}
+
 # Icons
-####
 icons:
   css:
     theme:
       dist/components/icons.css: {}
 
-####
 # Commerce
-####
 demo.frontpage:
   css:
     theme:
@@ -55,9 +82,13 @@ product.images:
   js:
     dist/product.images.js: {}
 
-####
+# Pages
+frontpage:
+  css:
+    theme:
+      dist/pages/frontpage.css: {}
+
 # Product teasers
-####
 product-teaser.belgrade:
   css:
     theme:
@@ -68,9 +99,7 @@ product-teaser.zoom:
     theme:
       dist/product-teaser/zoom.css: {}
 
-####
 # Font libraries
-####
 font.ibm_plex_sans:
   license:
     name: OFL web version

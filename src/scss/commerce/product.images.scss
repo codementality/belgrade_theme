@@ -11,6 +11,7 @@ $image-border-color: $border-color;
     border: 1px solid $image-border-color;
     opacity: 0.5;
     transition: $transition-fade;
+    object-fit: contain;
   }
   &:hover,
   &.active {

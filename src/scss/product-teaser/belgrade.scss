@@ -1,6 +1,7 @@
 //
 // Product teaser - Belgrade
 // ----------------------------
+@import "../global";
 
 $info-height: 4rem;
 $info-spacing: 1rem;
@@ -25,7 +26,7 @@ $transition: 0.2s ease;
 
   &-info {
     height: $info-height;
-    border-bottom: 2px solid var(--beo-primary);
+    border-bottom: 2px solid currentColor;
     transition: all $transition;
   }
 
@@ -33,6 +34,9 @@ $transition: 0.2s ease;
     line-height: 1.2;
     transition: all 0.2s ease;
     padding-right: $info-spacing * 3;
+    a {
+      color: var(--#{$variable-prefix}body-color);
+    }
   }
 
   // hover
@@ -44,14 +48,15 @@ $transition: 0.2s ease;
 
       &-info {
         padding: 0 $info-spacing;
-        background-color: var(--beo-primary);
-        color: var(--beo-white);
+        background-color: var(--#{$variable-prefix}primary);
+        color: var(--#{$variable-prefix}white);
       }
 
       &-title {
         padding-right: $info-spacing;
+        color: var(--#{$variable-prefix}white);
         a {
-          color: currentColor;
+          color: var(--#{$variable-prefix}white);
         }
       }
 
@@ -60,4 +65,10 @@ $transition: 0.2s ease;
       }
     }
   }
+}
+
+.text-white .product {
+  --beo-primary: #{$white};
+  --beo-white: #{$primary};
+  --#{$variable-prefix}body-color: $white;
 }

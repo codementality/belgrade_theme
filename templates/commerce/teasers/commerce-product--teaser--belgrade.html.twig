@@ -37,12 +37,12 @@
       {{ svg.getIcon('eye-fill', 34, 34, 'mb-2') }}
       <div class="fs-md">{{ 'View product' }}</div>
     </div>
-    {{- product.field_images -}}
-    {{- product.variation_field_images -}}
+    {{- product.images -}}
+    {{- product.variation_images -}}
   </div>
   <div class="product-info d-flex align-items-center justify-content-between">
     <div class="product-title fw-bold">{{ product.title }}</div>
     <a href="{{ product_url }}" class="stretched-link"></a>
-    {{- product|without('title', 'variation_attributes', 'field_images', 'variation_field_images') -}}
+    {{- product|without('title', 'variation_attributes', 'images', 'variation_images') -}}
   </div>
 </article>

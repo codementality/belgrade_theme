@@ -29,11 +29,11 @@
 %}
 
 <article{{ attributes.addClass(classes) }}>
-  {{- product.field_images -}}
-  {{- product.variation_field_images -}}
+  {{- product.images -}}
+  {{- product.variation_images -}}
   <div class="card-body pb-2">
     <div class="card-title current-color fw-bold">{{ product.title }}</div>
-    {{- product|without('title', 'variation_attributes', 'field_images', 'variation_field_images') -}}
+    {{- product|without('title', 'variation_attributes', 'images', 'variation_images') -}}
   </div>
   <a href="{{ product_url }}" class="btn btn-primary w-100">{{ 'View product'|t }}</a>
 </article>

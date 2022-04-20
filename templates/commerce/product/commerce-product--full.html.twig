@@ -19,7 +19,6 @@
  * @ingroup themeable
  */
 #}
-{{ attach_library('belgrade/product.images') }}
 
 {%
   set classes = [
@@ -30,28 +29,27 @@
 %}
 
 <article{{ attributes.addClass(classes) }}>
-
   <div class="row g-5">
     <div class="col-md-7 order-md-last">
       <div class="mb-2">
-        {{- product.field_product_categories -}}
+        {{- product.product_categories -}}
       </div>
-      <div class="fw-bold fs-2">{{- product.title -}}</div>
-      {{- product.field_brand -}}
+      {{- product.title -}}
+      {{- product.brand -}}
       <div class="fs-4">{{- product.variation_price -}}</div>
       <hr/>
-      {% if product.field_special_categories|render is not empty %}
+      {% if product.special_categories|render is not empty %}
         <div class="mb-3">
-          {{- product.field_special_categories -}}
+          {{- product.special_categories -}}
         </div>
       {% endif %}
-      {{- product|without('variation_attributes', 'field_images', 'variation_field_images', 'title', 'variation_price', 'field_product_categories', 'field_brand', 'field_special_categories') -}}
+      {{- product|without('variation_attributes', 'images', 'variation_images', 'title', 'variation_price', 'product_categories', 'brand', 'special_categories') -}}
     </div>
     <div class="col-md-5">
-      {% if product.variation_field_images|render is not empty %}
-        {{- product.variation_field_images -}}
+      {% if product.variation_images|render is not empty %}
+        {{- product.variation_images -}}
       {% else %}
-        {{- product.field_images -}}
+        {{- product.images -}}
       {% endif %}
     </div>
   </div>

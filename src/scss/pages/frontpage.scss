@@ -1,0 +1,16 @@
+//
+// Frontpage
+// ----------------------------
+//
+@import "../global";
+
+.region-header {
+  position: absolute;
+  margin-top: 0 !important;
+  width: 100%;
+  color: $white;
+  z-index: 5;
+  .nav-link:hover {
+    color: inherit;
+  }
+}

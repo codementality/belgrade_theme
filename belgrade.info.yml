@@ -30,6 +30,10 @@ ckeditor_stylesheets:
 libraries-extend:
   core/drupal.ajax:
     - belgrade/throbber
+  bootstrap_styles/themes-overrides:
+    - belgrade/layout-builder.theme
+  commerce_kickstart_layout_builder/cklb-slideshow:
+    - belgrade/cklb.slideshow
 
 libraries-override:
   commerce_cart/cart_block:

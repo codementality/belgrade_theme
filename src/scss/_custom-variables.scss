@@ -187,7 +187,7 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer: 1rem !default;
+$spacer: 1rem;
 $spacers: (
   0: 0,
   1: $spacer / 4,
@@ -195,7 +195,8 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
-) !default;
+  6: $spacer * 4.5
+);
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 

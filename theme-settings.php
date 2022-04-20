@@ -289,6 +289,22 @@ function belgrade_form_system_theme_settings_alter(&$form, FormStateInterface $f
     ),
   );
 
+  // Layout Builder
+  $form['layout_builder'] = array(
+    '#type' => 'details',
+    '#title' => t('Layout Builder'),
+    '#collapsible' => true,
+    '#open' => true,
+    '#group' => 'belgrade',
+  );
+
+  $form['layout_builder']['local_tasks_fixed'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Fixed local tasks'),
+    '#description' => t('On pages that use layout builder position local tasks fixed to the left.'),
+    '#default_value' => theme_get_setting('local_tasks_fixed')
+  );
+
   // Change collapsible fieldsets (now details) to default #open => FALSE.
   $form['theme_settings']['#open'] = false;
   $form['logo']['#open'] = false;

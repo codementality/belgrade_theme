@@ -39,9 +39,9 @@
       <h2{{ heading.attributes }}>{{ heading.text }}</h2>
     {%- endif -%}
   {%- endif -%}
-  <ul{{ attributes.addClass(['list-unstyled', 'd-flex', 'mb-0']) }}>
+  <ul{{ attributes.addClass(['list-unstyled', 'mb-0']) }}>
     {%- for item in links -%}
-      <li{{ item.attributes.addClass('me-2') }}>
+      <li{{ item.attributes }}>
         {%- if item.link -%}
           {{ item.link }}
         {%- elseif item.text_attributes -%}

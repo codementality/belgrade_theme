@@ -11,7 +11,10 @@
 
 use Drupal\Component\Utility\Html;
 use Drupal\node\NodeInterface;
+use Drupal\commerce_product\Entity\ProductInterface;
 use Drupal\taxonomy\Entity\Term;
+use Drupal\layout_builder\Entity\LayoutEntityDisplayInterface;
+use Drupal\Core\Entity\ContentEntityInterface;
 
 /**
  * Implements hook_preprocess_HOOK() for page templates.
@@ -29,9 +32,17 @@ function belgrade_preprocess_page(&$variables) {
     $main_container = theme_get_setting('main_container');
     $variables['main_container'] = $main_container;
   }
+
+  if (theme_get_setting('local_tasks_fixed') === 1) {
+    $variables['local_tasks_fixed'] = true;
+  }
 }
 
-
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for page templates.
+ * @param array $suggestions
+ * @param array $variables
+ */
 function belgrade_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   $current_path = \Drupal::service('path.current')->getPath();
   $result = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
@@ -51,6 +62,16 @@ function belgrade_theme_suggestions_page_alter(array &$suggestions, array $varia
     $suggestions[] = 'page__403';
   }
 
+  if ($product = \Drupal::routeMatch()->getParameter('commerce_product')) {
+    $type = $product->bundle();
+    // Add product type suggestions
+    if (!empty($product) && $product instanceof ProductInterface) {
+      array_splice($suggestions, 1, 0, 'page__product__' . $type);
+      // Add layout builder enabled template suggestions
+      _belgrade_theme_alter_page_suggestions($suggestions, $product);
+    }
+  }
+
   // * Adds page node type theme suggestion.
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     if ($node_revision = \Drupal::routeMatch()->getParameter('node_revision')) {
@@ -58,8 +79,12 @@ function belgrade_theme_suggestions_page_alter(array &$suggestions, array $varia
         $node = $node_revision;
       }
     }
-    if ($node instanceof NodeInterface) {
-      $suggestions[] = 'page__node__' . $node->getType();
+    if (!empty($node) && $node instanceof NodeInterface) {
+      $type = $node->getType();
+      // Add content type suggestions.
+      array_splice($suggestions, 1, 0, 'page__node__' . $type);
+      // Add layout builder enabled template suggestions
+      _belgrade_theme_alter_page_suggestions($suggestions, $node);
     }
   }
 
@@ -95,5 +120,40 @@ function belgrade_page_attachments_alter(array &$page) {
       $media_queries[$id] = $breakpoint->getMediaQuery();
     }
     $page['#attached']['drupalSettings']['responsive']['breakpoints'] = $media_queries;
+  }
+}
+
+
+/* Helpers */
+
+/**
+ * Belgrade theme alter entity suggestions.
+ */
+function _belgrade_theme_alter_entity_suggestions(array &$suggestions, ContentEntityInterface $entity, string $view_mode) {
+  $entity_type_id = $entity->getEntityTypeId();
+  /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $entity_display_repository */
+  $entity_display_repository = \Drupal::service('entity_display.repository');
+  $display = $entity_display_repository->getViewDisplay($entity_type_id, $entity->bundle());
+  if ($display instanceof LayoutEntityDisplayInterface && $display->isLayoutBuilderEnabled()) {
+    if ($view_mode === "full") {
+      array_splice($suggestions, 1, 0, $entity_type_id . '__layout__full__' . $entity->bundle());
+      array_splice($suggestions, 1, 0, $entity_type_id . '__layout__full');
+    }
+    array_splice($suggestions, 1, 0, $entity_type_id . '__layout__' . $entity->bundle());
+    array_splice($suggestions, 1, 0, $entity_type_id . '__layout');
+  }
+}
+
+/**
+ * Belgrade theme alter page suggestions.
+ */
+function _belgrade_theme_alter_page_suggestions(array &$suggestions, ContentEntityInterface $entity) {
+  $entity_type_id = $entity->getEntityTypeId();
+  /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $entity_display_repository */
+  $entity_display_repository = \Drupal::service('entity_display.repository');
+  $display = $entity_display_repository->getViewDisplay($entity_type_id, $entity->bundle());
+  if ($display instanceof LayoutEntityDisplayInterface && $display->isLayoutBuilderEnabled()) {
+    array_splice($suggestions, 1, 0, 'page__' . str_replace('commerce_', '', $entity_type_id) . '__layout__' . $entity->bundle());
+    array_splice($suggestions, 1, 0, 'page__' . str_replace('commerce_', '', $entity_type_id) . '__layout');
   }
 }

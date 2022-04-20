@@ -5,7 +5,8 @@
 # General.
 # ----------------------------
 inline_logo: 1
-fieldset_accordion: 1
+fieldset_accordion: 0
+local_tasks_fixed: 1
 
 # Fonts and Icons.
 # ----------------------------
@@ -18,8 +19,7 @@ product_teaser: 'belgrade'
 
 # Messages.
 # ----------------------------
-message_type: 'color_toasts'
-toast_placement: 'bottom_left'
+message_type: 'alerts'
 
 # Regions.
 # ----------------------------
@@ -39,6 +39,9 @@ region_container_top_bar: 'container-xl'
 # Header
 region_class_header: 'py-5 mt-lg-4'
 region_container_header: 'container-xl'
+
+# Highlighted
+region_container_highlighted: 'container-xl'
 
 # Sidebar First
 region_class_sidebar_first: 'col-lg-3 me-lg-4 order-first'

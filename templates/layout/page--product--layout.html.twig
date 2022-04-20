@@ -43,21 +43,4 @@
  */
 #}
 
-{% extends "@belgrade/layout/page.html.twig" %}
-
-
-{% block main %}
-  <main role="main" {{ attributes }}>
-    <a id="main-content" tabindex="-1"></a>
-
-      {{ page.content }}
-
-      {% if page.sidebar_first %}
-        {{ page.sidebar_first }}
-      {% endif %}
-
-      {% if page.sidebar_second %}
-        {{ page.sidebar_second }}
-      {% endif %}
-  </main>
-{% endblock %}
+{% extends "@belgrade/layout/page--node--layout.html.twig" %}

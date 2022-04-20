@@ -37,6 +37,12 @@
  */
 #}
 {%
+  set classes = [
+    field_name|clean_class,
+  ]
+%}
+
+{%
   set label_classes = [
     'form-label',
     label_display == 'visually_hidden' ? 'visually-hidden',
@@ -47,12 +53,12 @@
   {% if multiple %}
     <div{{ attributes }}>
       {% for item in items %}
-        <div{{ item.attributes }}>{{ item.content }}</div>
+        <div{{ item.attributes.addClass(classes) }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes }}>{{ item.content }}</div>
+      <div{{ attributes.addClass(classes) }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -62,7 +68,7 @@
       <div>
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes }}>{{ item.content }}</div>
+      <div{{ item.attributes.addClass(classes) }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>

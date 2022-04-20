@@ -27,6 +27,7 @@ let getFiles = function (dir) {
   const directories = [
     'product-teaser',
     'commerce',
+    'pages',
     'components'
   ];
 
