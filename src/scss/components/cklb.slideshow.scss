@@ -4,7 +4,7 @@
 //
 @import "../global";
 
-$cklb-slideshow-min-height: 600px;
+$cklb-slideshow-min-height: 500px;
 $cklb-slideshow-spacer: $spacer * 1.5;
 $cklb-slideshow-arrow-size: 2rem;
 $cklb-slideshow-dot-size: 0.875rem;
@@ -59,7 +59,7 @@ $cklb-slideshow-dot-size: 0.875rem;
 }
 
 // Slick overrides
-// - same height
+// - Same height slides.
 .slick-track {
   display: flex !important;
 }

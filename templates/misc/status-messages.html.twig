@@ -51,12 +51,8 @@
   %}
   <div aria-label="{{ status_headings[type] }}" {{ attributes|without('role', 'aria-label').addClass(classes).setAttribute('role', role[type]) }}>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    {% if is_message_with_title or is_message_with_icon %}
-      {% if is_message_with_title %}
-        <h4 id="{{ title_ids[type] }}" class="alert-heading">
-          {{ status_headings[type] }}
-        </h4>
-      {% endif %}
+    {% if status_headings[type] %}
+      <h2 class="visually-hidden">{{ status_headings[type] }}</h2>
     {% endif %}
     {% for message in messages %}
       {% if loop.last %}
