@@ -31,6 +31,7 @@ custom-form-elements:
     'assets/js/custom_form_elements.js': { }
   dependencies:
     - core/drupal
+    - core/jquery.once
 
 commerce.product-images:
     js:
