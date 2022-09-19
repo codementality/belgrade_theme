@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Core\Template\Attribute;
 /**
  * @file
  * Theme and preprocess functions for forms.
@@ -59,7 +60,7 @@ function belgrade_preprocess_input(&$variables) {
 
   if ($type == 'submit') {
 
-    $variables['attributes'] = new Drupal\Core\Template\Attribute($variables['attributes']);
+    $variables['attributes'] = new Attribute($variables['attributes']);
 
     // Get value.
     $string = $variables['attributes']->offsetGet('value')->value();
