@@ -15,19 +15,19 @@ $nav-tabs-fixed-offset: 220px;
 
   .nav-tabs {
     display: flex;
-    border: 1px solid var(--#{$variable-prefix}light);
+    border: 1px solid var(--#{$prefix}light);
     flex-direction: column;
     background-color: transparent;
   }
 
   .nav-item + .nav-item {
-    border-top: 1px solid var(--#{$variable-prefix}white);
+    border-top: 1px solid var(--#{$prefix}white);
   }
 
   .nav-link {
     opacity: .9;
     margin-bottom: 0;
-    background-color: var(--#{$variable-prefix}white);
+    background-color: var(--#{$prefix}white);
     text-transform: uppercase;
     font-weight: bold;
     font-size: $font-size-sm;
@@ -36,7 +36,7 @@ $nav-tabs-fixed-offset: 220px;
 
   .nav-link.active {
     opacity: 1;
-    background-color: var(--#{$variable-prefix}white);
+    background-color: var(--#{$prefix}white);
     border: 0;
   }
 }

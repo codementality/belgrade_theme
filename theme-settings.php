@@ -10,7 +10,6 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Link;
 use Drupal\Core\Url;
 
 /**
@@ -166,7 +165,6 @@ function belgrade_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#type' => 'details',
     '#title' => 'Navigation (Offcanvas)',
     '#collapsible' => true,
-    '#open' => true,
   );
 
   $form['regions']['navigation']['navigation_toggle_text'] = array(
@@ -261,7 +259,6 @@ function belgrade_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#type' => 'details',
     '#title' => t('Fonts & Icons'),
     '#collapsible' => true,
-    '#open' => true,
     '#group' => 'belgrade',
   );
 
@@ -294,7 +291,6 @@ function belgrade_form_system_theme_settings_alter(&$form, FormStateInterface $f
     '#type' => 'details',
     '#title' => t('Layout Builder'),
     '#collapsible' => true,
-    '#open' => true,
     '#group' => 'belgrade',
   );
 
@@ -310,4 +306,3 @@ function belgrade_form_system_theme_settings_alter(&$form, FormStateInterface $f
   $form['logo']['#open'] = false;
   $form['favicon']['#open'] = false;
 }
-

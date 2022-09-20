@@ -35,7 +35,7 @@ $transition: 0.2s ease;
     transition: all 0.2s ease;
     padding-right: $info-spacing * 3;
     a {
-      color: var(--#{$variable-prefix}body-color);
+      color: var(--#{$prefix}body-color);
     }
   }
 
@@ -48,15 +48,15 @@ $transition: 0.2s ease;
 
       &-info {
         padding: 0 $info-spacing;
-        background-color: var(--#{$variable-prefix}primary);
-        color: var(--#{$variable-prefix}white);
+        background-color: var(--#{$prefix}primary);
+        color: var(--#{$prefix}white);
       }
 
       &-title {
         padding-right: $info-spacing;
-        color: var(--#{$variable-prefix}white);
+        color: var(--#{$prefix}white);
         a {
-          color: var(--#{$variable-prefix}white);
+          color: var(--#{$prefix}white);
         }
       }
 
@@ -70,5 +70,5 @@ $transition: 0.2s ease;
 .text-white .product {
   --beo-primary: #{$white};
   --beo-white: #{$primary};
-  --#{$variable-prefix}body-color: $white;
+  --#{$prefix}body-color: $white;
 }
