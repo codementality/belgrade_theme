@@ -4,7 +4,7 @@ screenshot: screenshot.png
 core_version_requirement: ^9.2 || ^10
 engine: twig
 type: theme
-base theme: stable
+base theme: false
 
 regions:
   navigation: 'Navigation'
