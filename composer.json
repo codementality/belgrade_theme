@@ -3,5 +3,8 @@
   "type": "drupal-theme",
   "description": "Belgrade theme for Drupal Commerce.",
   "homepage": "http://drupal.org/project/belgrade",
-  "license": "GPL-2.0"
+  "license": "GPL-2.0",
+  "require": {
+     "drupal/stable": "^2.0"
+  }
 }

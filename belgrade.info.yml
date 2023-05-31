@@ -1,8 +1,7 @@
 name: Belgrade
 description: Bootstrap Drupal theme built for Centarro Commerce
 screenshot: screenshot.png
-core_version_requirement: ^8 || ^9 || ^10
-core: 8.x
+core_version_requirement: ^9.2 || ^10
 engine: twig
 type: theme
 base theme: stable

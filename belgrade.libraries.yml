@@ -8,7 +8,7 @@ global:
     dist/main.js: { weight: 0 }
   dependencies:
     - core/jquery
-    - core/jquery.once
+    - core/once
     - core/drupal
     - core/drupalSettings
     - belgrade/color
