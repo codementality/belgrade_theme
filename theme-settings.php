@@ -36,7 +36,7 @@ function belgrade_form_system_theme_settings_alter(&$form, FormStateInterface $f
   $form['belgrade'] = array(
     '#type' => 'vertical_tabs',
     '#weight' => -10,
-    '#description' => t('Cheatsheet of <a href="@link">Bootstrap components.</a>', ['@link' => Url::fromUri('internal:/' . drupal_get_path('theme', $theme) . '/cheatsheet/index.html')->toString()]),
+    '#description' => t('Cheatsheet of <a href="@link">Bootstrap components.</a>', ['@link' => Url::fromUri('internal:/' . \Drupal::service('extension.list.theme')->getPath($theme) . '/cheatsheet/index.html')->toString()]),
   );
 
   // General settings
