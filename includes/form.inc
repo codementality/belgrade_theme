@@ -137,6 +137,9 @@ function belgrade_preprocess_input(&$variables) {
       ],
     ];
 
+    // Allow sub themes to alter the array.
+    \Drupal::service('theme.manager')->alter('belgrade_submit_button_class', $text_data);
+
     $icon_data = [
       // Text that match these specific strings are checked first.
       'matches' => [
