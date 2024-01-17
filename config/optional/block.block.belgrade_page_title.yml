@@ -21,4 +21,4 @@ visibility:
     id: request_path
     pages: "<front>\r\n/product/*\r\n/products*\r\n"
     negate: true
-    context_mapping: {  }
+    context_mapping: {}

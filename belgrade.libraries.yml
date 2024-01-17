@@ -2,10 +2,11 @@ global:
   version: VERSION
   css:
     theme:
-      dist/main.css: { weight: -1000 }
+      css/main.css: { weight: -1000 }
   js:
-    dist/bootstrap.js: { weight: -1000 }
-    dist/main.js: { weight: 0 }
+    '//cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js':
+      { type: external, minified: true, weight: -1000 }
+    js/main.js: { weight: 0 }
   dependencies:
     - core/jquery
     - core/once
@@ -15,12 +16,12 @@ global:
 
 throbber:
   js:
-    dist/throbber.js: {}
+    js/throbber.js: {}
 
 color:
   css:
     theme:
-      dist/color.css: {}
+      css/color.css: {}
 
 color.preview:
   version: VERSION
@@ -35,69 +36,69 @@ color.preview:
 local-tasks.fixed:
   css:
     component:
-      dist/theme/local-tasks.fixed.css: {}
+      css/theme/local-tasks.fixed.css: {}
 select2.theme:
   css:
     component:
-      dist/theme/select2--belgrade-theme.css: {}
+      css/theme/select2--belgrade-theme.css: {}
 
 # Layout Builder
 layout-builder.theme:
   css:
     component:
-      dist/components/layout-builder/layout-builder.theme.css: {}
+      css/components/layout-builder/layout-builder.theme.css: {}
 cklb:
   css:
     component:
-      dist/components/layout-builder/cklb.css: {}
+      css/components/layout-builder/cklb.css: {}
 cklb.cta:
   css:
     component:
-      dist/components/layout-builder/cklb.cta.css: {}
+      css/components/layout-builder/cklb.cta.css: {}
 cklb.hero:
   css:
     component:
-      dist/components/layout-builder/cklb.hero.css: {}
+      css/components/layout-builder/cklb.hero.css: {}
 cklb.slideshow:
   css:
     component:
-      dist/components/layout-builder/cklb.slideshow.css: {}
+      css/components/layout-builder/cklb.slideshow.css: {}
 
 # Icons
 icons:
   css:
     theme:
-      dist/components/icons.css: {}
+      css/components/icons.css: {}
 
 # Commerce
 demo.frontpage:
   css:
     theme:
-      dist/components/commerce/commerce-demo--frontpage.css: {}
+      css/components/commerce/commerce-demo--frontpage.css: {}
 
 product.images:
   css:
     theme:
-      dist/components/commerce/product.images.css: {}
+      css/components/commerce/product.images.css: {}
   js:
-    dist/product.images.js: {}
+    js/product.images.js: {}
 
 # Pages
 frontpage:
   css:
     theme:
-      dist/pages/frontpage.css: {}
+      css/pages/frontpage.css: {}
 
 # Product teasers
 product-teaser.belgrade:
   css:
     theme:
-      dist/components/product-teaser/belgrade.css: {}
+      css/components/product-teaser/belgrade.css: {}
 
 product-teaser.zoom:
   css:
     theme:
-      dist/components/product-teaser/zoom.css: {}
+      css/components/product-teaser/zoom.css: {}
 
 # Font libraries
 font.ibm_plex_sans:
@@ -106,8 +107,9 @@ font.ibm_plex_sans:
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
   css:
     theme:
-      '//fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700': { type: external, minified: true }
-      dist/fonts/ibm_plex_sans.css: {}
+      '//fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700':
+        { type: external, minified: true }
+      css/fonts/ibm_plex_sans.css: {}
 
 font.lato:
   license:
@@ -115,8 +117,9 @@ font.lato:
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
   css:
     theme:
-      '//fonts.googleapis.com/css?family=Lato:300,400,400i,700': { type: external, minified: true }
-      dist/fonts/lato.css: {}
+      '//fonts.googleapis.com/css?family=Lato:300,400,400i,700':
+        { type: external, minified: true }
+      css/fonts/lato.css: {}
 
 font.montserrat:
   license:
@@ -124,8 +127,9 @@ font.montserrat:
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
   css:
     theme:
-      '//fonts.googleapis.com/css?family=Montserrat:300,400,400i,700': { type: external, minified: true }
-      dist/fonts/montserrat.css: {}
+      '//fonts.googleapis.com/css?family=Montserrat:300,400,400i,700':
+        { type: external, minified: true }
+      css/fonts/montserrat.css: {}
 
 font.open_sans:
   license:
@@ -133,8 +137,9 @@ font.open_sans:
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
   css:
     theme:
-      '//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700': { type: external, minified: true }
-      dist/fonts/open_sans.css: {}
+      '//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700':
+        { type: external, minified: true }
+      css/fonts/open_sans.css: {}
 
 font.raleway:
   license:
@@ -142,8 +147,9 @@ font.raleway:
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
   css:
     theme:
-      '//fonts.googleapis.com/css?family=Raleway:300,400,400i,700': { type: external, minified: true }
-      dist/fonts/raleway.css: {}
+      '//fonts.googleapis.com/css?family=Raleway:300,400,400i,700':
+        { type: external, minified: true }
+      css/fonts/raleway.css: {}
 
 font.roboto:
   license:
@@ -151,5 +157,6 @@ font.roboto:
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
   css:
     theme:
-      '//fonts.googleapis.com/css?family=Roboto:300,400,400i,700': { type: external, minified: true }
-      dist/fonts/roboto.css: {}
+      '//fonts.googleapis.com/css?family=Roboto:300,400,400i,700':
+        { type: external, minified: true }
+      css/fonts/roboto.css: {}

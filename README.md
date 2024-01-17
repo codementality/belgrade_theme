@@ -65,17 +65,11 @@ The theme offers advanced support for scalable vector graphics (SVG), allowing y
 
 ## BUILD TOOLS
 
-Theme utilizes the following build tools to streamline frontend development:
-
-### Laravel Mix
-
-Laravel Mix is an API on top of Webpack, simplifying frontend tooling. It enables efficient compilation of assets and provides a range of powerful features.
-
-Configuration for Laravel mix is in the `webpack.mix.js` file.
+The Belgrade Drupal Theme leverages modern build tools to streamline frontend development, ensuring a smooth and efficient customization process. These tools enhance asset compilation, provide powerful features, and optimize your workflow. Below are the key build tools integrated into the theme:
 
 ### PostCSS Autoprefixer
 
-PostCSS Autoprefixer is a plugin that automatically adds vendor prefixes to CSS properties.
+Autoprefixer is a PostCSS plugin that automatically adds vendor prefixes to CSS properties.
 
 ### SVG Inline Icons
 
@@ -91,14 +85,11 @@ Note that the svg-load() function only overrides attributes in the `<svg>` eleme
 
 By leveraging these build tools, the Belgrade Drupal Theme optimizes your frontend development workflow, ensuring compatibility and efficiency throughout the theme customization process.
 
-### Build Tools Installation
+### Installation:
 
-These require some global dependencies: Node.js and npm.
-Download Node.js installation binary from <https://nodejs.org/dist/> according to your operation system.
+Download the Node.js installation binary from [the official website](https://nodejs.org/dist/) based on your operating system. After installation, confirm Node.js and npm are available with the following commands:
 
-Verify the installation with the following commands:
-
-```
+```bash
 node -v
 npm -v
 ```
@@ -106,7 +97,7 @@ npm -v
 To install all dependecies run:
 
 ```
-npm i
+npm install
 ```
 
 ### Build Tools Usage
@@ -121,10 +112,9 @@ npm run watch
 # Compiling in a Production Environment
 npm run production
 
-# Create a SVG sprite from all SVG's in `src/icons` folder.
+# Create an SVG sprite from all SVGs in the `icons` folder.
 npm run icons-sprite
 ```
-
 
 ## MAINTAINERS
 

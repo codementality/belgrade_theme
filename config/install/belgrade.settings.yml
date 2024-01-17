@@ -1,7 +1,6 @@
 # Default settings should not be located here. This file is only used to
 # override existing settings.
 
-
 # General.
 # ----------------------------
 inline_logo: 1

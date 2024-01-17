@@ -60,7 +60,7 @@ $info = [
 
   // CSS files (excluding @import) to rewrite with new color scheme.
   'css' => [
-    'dist/color.css',
+    'css/color.css',
   ],
 
   // Files to copy.

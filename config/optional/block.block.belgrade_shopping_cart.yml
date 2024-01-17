@@ -18,4 +18,4 @@ settings:
   label_display: '0'
   dropdown: true
   item_text: items
-visibility: {  }
+visibility: {}

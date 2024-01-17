@@ -1,73 +1,71 @@
 /* global bootstrap: false */
 
 (function () {
-  'use strict'
-
   // Tooltip and popover demos
-  document.querySelectorAll('.tooltip-demo')
-    .forEach(function (tooltip) {
-      new bootstrap.Tooltip(tooltip, {
-        selector: '[data-bs-toggle="tooltip"]'
-      })
-    })
+  document.querySelectorAll('.tooltip-demo').forEach(function (tooltip) {
+    new bootstrap.Tooltip(tooltip, {
+      selector: '[data-bs-toggle="tooltip"]',
+    });
+  });
 
-  document.querySelectorAll('[data-bs-toggle="popover"]')
+  document
+    .querySelectorAll('[data-bs-toggle="popover"]')
     .forEach(function (popover) {
-      new bootstrap.Popover(popover)
-    })
+      new bootstrap.Popover(popover);
+    });
 
-  document.querySelectorAll('.toast')
-    .forEach(function (toastNode) {
-      var toast = new bootstrap.Toast(toastNode, {
-        autohide: false
-      })
+  document.querySelectorAll('.toast').forEach(function (toastNode) {
+    const toast = new bootstrap.Toast(toastNode, {
+      autohide: false,
+    });
 
-      toast.show()
-    })
+    toast.show();
+  });
 
   // Disable empty links and submit buttons
-  document.querySelectorAll('[href="#"], [type="submit"]')
+  document
+    .querySelectorAll('[href="#"], [type="submit"]')
     .forEach(function (link) {
       link.addEventListener('click', function (event) {
-        event.preventDefault()
-      })
-    })
+        event.preventDefault();
+      });
+    });
 
   function setActiveItem() {
-    var hash = window.location.hash
+    const { hash } = window.location;
 
     if (hash === '') {
-      return
+      return;
     }
 
-    var link = document.querySelector('.bd-aside a[href="' + hash + '"]')
+    const link = document.querySelector(`.bd-aside a[href="${hash}"]`);
 
     if (!link) {
-      return
+      return;
     }
 
-    var active = document.querySelector('.bd-aside .active')
-    var parent = link.parentNode.parentNode.previousElementSibling
+    const active = document.querySelector('.bd-aside .active');
+    const parent = link.parentNode.parentNode.previousElementSibling;
 
-    link.classList.add('active')
+    link.classList.add('active');
 
     if (parent.classList.contains('collapsed')) {
-      parent.click()
+      parent.click();
     }
 
     if (!active) {
-      return
+      return;
     }
 
-    var expanded = active.parentNode.parentNode.previousElementSibling
+    const expanded = active.parentNode.parentNode.previousElementSibling;
 
-    active.classList.remove('active')
+    active.classList.remove('active');
 
     if (expanded && parent !== expanded) {
-      expanded.click()
+      expanded.click();
     }
   }
 
-  setActiveItem()
-  window.addEventListener('hashchange', setActiveItem)
-})()
+  setActiveItem();
+  window.addEventListener('hashchange', setActiveItem);
+})();
