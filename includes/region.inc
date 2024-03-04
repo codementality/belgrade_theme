@@ -22,7 +22,7 @@ function belgrade_preprocess_region(&$variables) {
 
   if ($region === 'top_bar') {
     // Menu toggle text
-    $variables['navigation_toggle_text'] = t(theme_get_setting('navigation_toggle_text'));
+    $variables['navigation_toggle_text'] = theme_get_setting('navigation_toggle_text');
   }
 
   if ($region === 'navigation') {
