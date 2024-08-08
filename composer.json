@@ -1,6 +1,6 @@
 {
-  "name": "drupal/belgrade",
-  "type": "drupal-theme",
+  "name": "codementality/belgrade",
+  "type": "drupal-custom-theme",
   "description": "Belgrade theme for Drupal Commerce.",
   "homepage": "http://drupal.org/project/belgrade",
   "license": "GPL-2.0",
